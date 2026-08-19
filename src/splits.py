@@ -79,3 +79,68 @@ def leakage_ratio(splits: dict[str, pd.DataFrame], X: int) -> float:
         np.any(np.abs(train_dates - d) <= window) for d in test_dates
     )
     return leaked / len(test_dates)
+
+
+def stratified_block_split(
+    data,
+    target_col,
+    block_size=config.BLOCK_SIZE,
+    train_size=config.TRAIN_SIZE,
+    val_size=config.VAL_SIZE,
+    random_state=config.RANDOM_STATE,
+    shuffle_window=3,
+):
+    """Block split stratified by block-level demand.
+
+    Plain block shuffling leaves the seasonal composition of each split to
+    chance. With only ~24 blocks in a one-year series, some draws put the
+    whole Christmas ramp in one split and none of it in another, which makes
+    the resulting scores incomparable across seeds.
+
+    This reduces the VARIANCE of the estimate, not the difficulty of the
+    problem. One year of data still contains exactly one Christmas.
+    """
+    data = data.sort_values("Date").reset_index(drop=True)
+
+    n_blocks = int(np.ceil(len(data) / block_size))
+    data = data.copy()
+    data["block_id"] = np.repeat(np.arange(n_blocks), block_size)[: len(data)]
+
+    rng = np.random.default_rng(random_state)
+
+    # Order blocks by mean demand, then shuffle within short windows. The
+    # window matters: without it the assignment is fully determined by demand
+    # order, every seed returns the same split, and there is no way to
+    # estimate uncertainty at all.
+    ordered = (data.groupby("block_id")[target_col].mean()
+               .sort_values().index.to_numpy().copy())
+    for i in range(0, len(ordered), shuffle_window):
+        window = ordered[i : i + shuffle_window].copy()
+        rng.shuffle(window)
+        ordered[i : i + shuffle_window] = window
+
+    n = len(ordered)
+    n_val = max(int(round(n * val_size)), 1)
+    n_test = max(n - int(round(n * train_size)) - n_val, 1)
+    n_train = n - n_val - n_test
+
+    # Largest-remainder interleaving: each block goes to whichever split is
+    # furthest behind its quota, so all three spread across the demand range
+    # instead of clustering at one end.
+    quotas = {"train": n_train, "validation": n_val, "test": n_test}
+    assigned = {k: [] for k in quotas}
+
+    for j, block in enumerate(ordered, start=1):
+        deficits = {
+            k: quotas[k] * j / n - len(assigned[k])
+            for k in quotas
+            if len(assigned[k]) < quotas[k]
+        }
+        assigned[max(deficits, key=deficits.get)].append(block)
+
+    return {
+        name: (data[data["block_id"].isin(blocks)]
+               .drop(columns="block_id")
+               .reset_index(drop=True))
+        for name, blocks in assigned.items()
+    }

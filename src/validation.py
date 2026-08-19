@@ -10,7 +10,7 @@ from .metrics import evaluate_forecast
 
 
 def repeated_evaluation(daily, category, X=config.DEFAULT_X, Y=config.DEFAULT_Y,
-                        seeds=range(30), split_name="validation"):
+                        seeds=range(30), split_name="validation", stratified=False):
     """Run every registered model across many block-shuffled draws."""
     data = feat.build_features(daily, category, X=X, Y=Y)
     if len(data) < 50:
@@ -21,7 +21,9 @@ def repeated_evaluation(daily, category, X=config.DEFAULT_X, Y=config.DEFAULT_Y,
 
     rows = []
     for seed in seeds:
-        s = spl.block_shuffled_split(data, random_state=seed)
+        s = (spl.stratified_block_split(data, target, random_state=seed)
+             if stratified else
+             spl.block_shuffled_split(data, random_state=seed))
         train, held = s["train"], s[split_name]
 
         for name, fit_predict in mdl.MODELS.items():

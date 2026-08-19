@@ -1,0 +1,6 @@
+Category,X,Y,claimed_model,claimed_wape,measured_wape_mean,measured_wape_std,claimed_model_winrate,actual_best_model,actual_best_wape
+Cake Cases & Baking Accessories,24,14,Random Forest,6.9,10.0,3.0,0.33,Random Forest,10.0
+Christmas Decorations,7,6,7-Day Rolling Sum Baseline,19.6,21.9,4.4,0.7,7-Day Rolling Sum Baseline,21.9
+Jewellery - Earrings,28,7,XGBoost,9.7,54.1,11.3,0.27,Random Forest,51.2
+Jumbo Bags & Shoppers,16,8,Random Forest,11.3,24.9,5.4,0.3,Random Forest,24.9
+Tealight Holders & Sets,7,3,7-Day Rolling Sum Baseline,12.5,31.7,10.4,0.3,XGBoost,27.4

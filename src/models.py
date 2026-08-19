@@ -101,8 +101,8 @@ TABFM_MODEL = None
 TABFM_AVAILABLE = False
 
 
-def enable_tabfm(backend: str = "pytorch", max_context_rows: int = 2048,
-                 n_estimators: int = 4) -> bool:
+def enable_tabfm(backend: str = "pytorch", max_context_rows=None,
+                 n_estimators: int = 32) -> bool:
     """Load TabFM weights once and register it as a model.
 
     Call this explicitly from a notebook — loading downloads weights and is
@@ -136,15 +136,11 @@ def enable_tabfm(backend: str = "pytorch", max_context_rows: int = 2048,
         # context and .predict() runs one forward pass. The whole training
         # set must therefore fit inside the context window — the library
         # default of 100 rows would silently sample away most of it.
-        if len(train) > max_context_rows:
-            print(
-                f"    [TabFM] {len(train)} training rows exceed "
-                f"max_context_rows={max_context_rows}; context sampled."
-            )
         reg = TabFMRegressor(
             model=TABFM_MODEL,
             max_num_rows=max_context_rows,
             n_estimators=n_estimators,
+            random_state=config.RANDOM_STATE,
         )
         reg.fit(_prep(train, features), train[target])
         return (

@@ -1,0 +1,11 @@
+Category,split,wape_mean,wape_std,wape_max,denom_cv
+Tealight Holders & Sets,original,24.3,8.2,45.2,0.181
+Tealight Holders & Sets,stratified,22.3,6.2,33.6,0.066
+Cake Cases & Baking Accessories,original,29.9,9.7,50.8,0.147
+Cake Cases & Baking Accessories,stratified,32.6,3.9,39.3,0.053
+Jumbo Bags & Shoppers,original,39.4,11.0,72.9,0.235
+Jumbo Bags & Shoppers,stratified,33.1,4.6,44.7,0.053
+Christmas Decorations,original,46.5,42.8,209.0,0.747
+Christmas Decorations,stratified,29.5,8.8,55.3,0.107
+Jewellery - Earrings,original,96.4,53.5,360.0,0.6
+Jewellery - Earrings,stratified,77.2,4.6,84.3,0.09

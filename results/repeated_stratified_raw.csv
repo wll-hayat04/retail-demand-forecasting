@@ -1,0 +1,601 @@
+Category,Model,seed,wape,r2
+Tealight Holders & Sets,7-Day Rolling Sum Baseline,0,29.76472842352848,0.2574357041962587
+Tealight Holders & Sets,Linear Regression,0,32.36737958844608,0.2890424506667598
+Tealight Holders & Sets,Random Forest,0,28.10736371624702,0.32907911763029396
+Tealight Holders & Sets,XGBoost,0,28.566910145204094,0.2808649195439371
+Tealight Holders & Sets,7-Day Rolling Sum Baseline,1,14.570849988288009,0.6828829481922398
+Tealight Holders & Sets,Linear Regression,1,29.385058949943982,-0.12628452725046468
+Tealight Holders & Sets,Random Forest,1,18.612588123285708,0.5045744547788276
+Tealight Holders & Sets,XGBoost,1,17.59905348710949,0.5785582293768494
+Tealight Holders & Sets,7-Day Rolling Sum Baseline,2,28.232103121831752,0.28913245855193326
+Tealight Holders & Sets,Linear Regression,2,25.57192147040741,0.48701155615494707
+Tealight Holders & Sets,Random Forest,2,28.87570771175394,0.401143485884184
+Tealight Holders & Sets,XGBoost,2,27.741435884143883,0.4942947619264805
+Tealight Holders & Sets,7-Day Rolling Sum Baseline,3,20.359500303986565,0.4266667788000803
+Tealight Holders & Sets,Linear Regression,3,17.563877072915133,0.6009478983382037
+Tealight Holders & Sets,Random Forest,3,15.25022618048117,0.653182631153408
+Tealight Holders & Sets,XGBoost,3,17.29811665662614,0.5724312450749206
+Tealight Holders & Sets,7-Day Rolling Sum Baseline,4,16.004865218721793,0.6448456225247141
+Tealight Holders & Sets,Linear Regression,4,39.723558234605356,-0.647639183627361
+Tealight Holders & Sets,Random Forest,4,20.523777981786413,0.5013137495996853
+Tealight Holders & Sets,XGBoost,4,16.278894839578033,0.7116696313952724
+Tealight Holders & Sets,7-Day Rolling Sum Baseline,5,15.92501252738831,0.718581832863903
+Tealight Holders & Sets,Linear Regression,5,17.756719599039254,0.7433261655112575
+Tealight Holders & Sets,Random Forest,5,18.866675837042422,0.7048191242511399
+Tealight Holders & Sets,XGBoost,5,17.716987251770412,0.7240597875145136
+Tealight Holders & Sets,7-Day Rolling Sum Baseline,6,17.279569214220977,0.6921262071180851
+Tealight Holders & Sets,Linear Regression,6,17.678812878501244,0.7617427922384172
+Tealight Holders & Sets,Random Forest,6,15.918986976166686,0.7836911100451525
+Tealight Holders & Sets,XGBoost,6,16.653264383785192,0.7817174230380263
+Tealight Holders & Sets,7-Day Rolling Sum Baseline,7,29.738636486823424,-0.3333981523054099
+Tealight Holders & Sets,Linear Regression,7,28.621460961669488,-0.1657626903980718
+Tealight Holders & Sets,Random Forest,7,31.183259798873316,-0.4156325440896944
+Tealight Holders & Sets,XGBoost,7,35.858556425220236,-0.8451119029742975
+Tealight Holders & Sets,7-Day Rolling Sum Baseline,8,21.457568716499882,0.6280170331178121
+Tealight Holders & Sets,Linear Regression,8,21.296664659575278,0.649155994005977
+Tealight Holders & Sets,Random Forest,8,17.272803184326566,0.7722811930152611
+Tealight Holders & Sets,XGBoost,8,18.17865917373112,0.7539089812056945
+Tealight Holders & Sets,7-Day Rolling Sum Baseline,9,28.77869738971688,-0.11289266824241251
+Tealight Holders & Sets,Linear Regression,9,34.47554616188549,-0.545949189753461
+Tealight Holders & Sets,Random Forest,9,32.71401560186853,-0.2664380329194165
+Tealight Holders & Sets,XGBoost,9,32.54471882679524,-0.4920532001005362
+Tealight Holders & Sets,7-Day Rolling Sum Baseline,10,20.571818718345337,0.5334194759569538
+Tealight Holders & Sets,Linear Regression,10,23.873913947623954,0.26031758646236614
+Tealight Holders & Sets,Random Forest,10,17.608085849955447,0.6594204207570971
+Tealight Holders & Sets,XGBoost,10,16.11927837205947,0.6854910571938198
+Tealight Holders & Sets,7-Day Rolling Sum Baseline,11,18.660975224454333,0.6665781342723416
+Tealight Holders & Sets,Linear Regression,11,18.185627521597734,0.7106878510149073
+Tealight Holders & Sets,Random Forest,11,17.61130236170717,0.7329552405184229
+Tealight Holders & Sets,XGBoost,11,17.379167762206553,0.7405299374166894
+Tealight Holders & Sets,7-Day Rolling Sum Baseline,12,18.504710331918563,0.5951595066557059
+Tealight Holders & Sets,Linear Regression,12,15.516908152521095,0.685130032284232
+Tealight Holders & Sets,Random Forest,12,15.451791312653576,0.6768349749074327
+Tealight Holders & Sets,XGBoost,12,15.449994626766134,0.6873095186916749
+Tealight Holders & Sets,7-Day Rolling Sum Baseline,13,20.359500303986565,0.4266667788000803
+Tealight Holders & Sets,Linear Regression,13,13.94842257683944,0.7251323927252729
+Tealight Holders & Sets,Random Forest,13,16.158668321704642,0.6083099382678694
+Tealight Holders & Sets,XGBoost,13,17.495038042001944,0.5783385932190777
+Tealight Holders & Sets,7-Day Rolling Sum Baseline,14,28.326949035058917,-0.3229856544187504
+Tealight Holders & Sets,Linear Regression,14,44.935283736929044,-1.8561245899294172
+Tealight Holders & Sets,Random Forest,14,31.153675531720843,-0.5480817984471764
+Tealight Holders & Sets,XGBoost,14,35.143909635958195,-0.8733150516086472
+Tealight Holders & Sets,7-Day Rolling Sum Baseline,15,31.42759713994464,-0.4327670694622585
+Tealight Holders & Sets,Linear Regression,15,26.709535435193665,0.18798585282321523
+Tealight Holders & Sets,Random Forest,15,21.874061793737916,0.3192705237799377
+Tealight Holders & Sets,XGBoost,15,19.94219349699266,0.3680730504720312
+Tealight Holders & Sets,7-Day Rolling Sum Baseline,16,20.427155798832754,0.6364240118558058
+Tealight Holders & Sets,Linear Regression,16,26.629905683749627,0.48215241421580524
+Tealight Holders & Sets,Random Forest,16,23.451865058049293,0.570668771705273
+Tealight Holders & Sets,XGBoost,16,24.231444147508107,0.5494419646734413
+Tealight Holders & Sets,7-Day Rolling Sum Baseline,17,25.557562520311073,-0.0431608882687311
+Tealight Holders & Sets,Linear Regression,17,33.320590610906514,-0.5100614823487275
+Tealight Holders & Sets,Random Forest,17,33.64139150676028,-0.4567471707994659
+Tealight Holders & Sets,XGBoost,17,35.5269240961101,-0.7393462433271529
+Tealight Holders & Sets,7-Day Rolling Sum Baseline,18,27.306945118989802,-0.12313751134218665
+Tealight Holders & Sets,Linear Regression,18,22.92198861672763,0.3588499657094266
+Tealight Holders & Sets,Random Forest,18,23.9495109124575,0.2844681583155413
+Tealight Holders & Sets,XGBoost,18,22.81088141227822,0.2887835298440997
+Tealight Holders & Sets,7-Day Rolling Sum Baseline,19,20.427155798832754,0.6364240118558058
+Tealight Holders & Sets,Linear Regression,19,26.756797996697934,0.5278437413655221
+Tealight Holders & Sets,Random Forest,19,26.572191702724346,0.512354156574769
+Tealight Holders & Sets,XGBoost,19,23.054185002308873,0.6056785544916874
+Tealight Holders & Sets,7-Day Rolling Sum Baseline,20,16.2747909743403,0.6331158303501798
+Tealight Holders & Sets,Linear Regression,20,43.4011754387432,-0.8787200991199273
+Tealight Holders & Sets,Random Forest,20,25.096447701855816,0.2614387250548672
+Tealight Holders & Sets,XGBoost,20,30.853071710726603,-0.12825439931807447
+Tealight Holders & Sets,7-Day Rolling Sum Baseline,21,14.570849988288009,0.6828829481922398
+Tealight Holders & Sets,Linear Regression,21,34.079371737151696,-0.35276994258200234
+Tealight Holders & Sets,Random Forest,21,30.20983164957724,-0.0012739211956245278
+Tealight Holders & Sets,XGBoost,21,33.75000706541784,-0.3282944006437425
+Tealight Holders & Sets,7-Day Rolling Sum Baseline,22,16.88410223686924,0.6363115432364175
+Tealight Holders & Sets,Linear Regression,22,18.121486579089996,0.6525245863958049
+Tealight Holders & Sets,Random Forest,22,14.200123730112718,0.7478385568162874
+Tealight Holders & Sets,XGBoost,22,15.084062340868924,0.7455859310554429
+Tealight Holders & Sets,7-Day Rolling Sum Baseline,23,18.586759998009523,0.6784867128895874
+Tealight Holders & Sets,Linear Regression,23,18.75861515475458,0.7358631225643051
+Tealight Holders & Sets,Random Forest,23,17.425287375387725,0.7707620103618367
+Tealight Holders & Sets,XGBoost,23,15.454334173800943,0.7993411687644012
+Tealight Holders & Sets,7-Day Rolling Sum Baseline,24,17.43462372958776,0.5098746275669227
+Tealight Holders & Sets,Linear Regression,24,15.581696488480784,0.6528027777786125
+Tealight Holders & Sets,Random Forest,24,14.906539054470707,0.656510805157051
+Tealight Holders & Sets,XGBoost,24,15.802821087159291,0.5972231293650329
+Tealight Holders & Sets,7-Day Rolling Sum Baseline,25,21.457568716499882,0.6280170331178121
+Tealight Holders & Sets,Linear Regression,25,22.22395162611937,0.5754237343470884
+Tealight Holders & Sets,Random Forest,25,19.787125722810444,0.7241797314421596
+Tealight Holders & Sets,XGBoost,25,23.82106735176713,0.5733567668880113
+Tealight Holders & Sets,7-Day Rolling Sum Baseline,26,18.504710331918563,0.5951595066557059
+Tealight Holders & Sets,Linear Regression,26,16.388461422861887,0.649589565149606
+Tealight Holders & Sets,Random Forest,26,17.874660108919205,0.618013202231255
+Tealight Holders & Sets,XGBoost,26,16.08369000558341,0.6820280412282533
+Tealight Holders & Sets,7-Day Rolling Sum Baseline,27,28.232103121831752,0.28913245855193326
+Tealight Holders & Sets,Linear Regression,27,31.506406365595264,0.21193963059576526
+Tealight Holders & Sets,Random Forest,27,30.806751899300842,0.22873579681207257
+Tealight Holders & Sets,XGBoost,27,31.039037622723185,0.22564575395443698
+Tealight Holders & Sets,7-Day Rolling Sum Baseline,28,20.064938598559742,0.4366956564462976
+Tealight Holders & Sets,Linear Regression,28,13.985395544560067,0.6752349447032766
+Tealight Holders & Sets,Random Forest,28,15.46998131654846,0.6627131616387273
+Tealight Holders & Sets,XGBoost,28,17.29461683761042,0.5677066525364379
+Tealight Holders & Sets,7-Day Rolling Sum Baseline,29,30.5677511784823,-0.19555709297579305
+Tealight Holders & Sets,Linear Regression,29,26.034852643792245,0.3055244086529624
+Tealight Holders & Sets,Random Forest,29,27.328696429121607,-0.024127939047999147
+Tealight Holders & Sets,XGBoost,29,30.25797834442493,-0.4271003595126537
+Cake Cases & Baking Accessories,7-Day Rolling Sum Baseline,0,50.71244546624146,-0.5692735052649891
+Cake Cases & Baking Accessories,Linear Regression,0,37.57505726970337,0.13683817477897842
+Cake Cases & Baking Accessories,Random Forest,0,37.193435634848726,0.16970426000605043
+Cake Cases & Baking Accessories,XGBoost,0,35.30538739461543,0.1583341490761898
+Cake Cases & Baking Accessories,7-Day Rolling Sum Baseline,1,43.989436307437614,-0.9758613675610399
+Cake Cases & Baking Accessories,Linear Regression,1,25.997882133385275,0.3103275422174482
+Cake Cases & Baking Accessories,Random Forest,1,29.61098118178026,0.14281409576079207
+Cake Cases & Baking Accessories,XGBoost,1,27.605379488096343,0.20058170171607081
+Cake Cases & Baking Accessories,7-Day Rolling Sum Baseline,2,48.42662530993614,-0.7458578613837761
+Cake Cases & Baking Accessories,Linear Regression,2,33.39660739449425,0.18785585095569868
+Cake Cases & Baking Accessories,Random Forest,2,34.429471776265196,0.2608315983425181
+Cake Cases & Baking Accessories,XGBoost,2,34.03604372330939,0.1929978189680378
+Cake Cases & Baking Accessories,7-Day Rolling Sum Baseline,3,52.646854948419595,-1.2163438779171942
+Cake Cases & Baking Accessories,Linear Regression,3,35.71012239113509,0.04620372538811002
+Cake Cases & Baking Accessories,Random Forest,3,33.791024305619906,0.08077456875135092
+Cake Cases & Baking Accessories,XGBoost,3,35.71082188268586,0.14059520892493738
+Cake Cases & Baking Accessories,7-Day Rolling Sum Baseline,4,31.975691750711142,-0.5310304844853035
+Cake Cases & Baking Accessories,Linear Regression,4,23.89254750928277,0.1634334952205022
+Cake Cases & Baking Accessories,Random Forest,4,24.676877711691517,0.14114300941953783
+Cake Cases & Baking Accessories,XGBoost,4,24.830219040923197,0.1384232002924557
+Cake Cases & Baking Accessories,7-Day Rolling Sum Baseline,5,46.96112719151819,-0.4291521681507957
+Cake Cases & Baking Accessories,Linear Regression,5,39.82492800178565,0.23713572125366733
+Cake Cases & Baking Accessories,Random Forest,5,33.36184805473893,0.328575481240549
+Cake Cases & Baking Accessories,XGBoost,5,34.40657109676592,0.2609914546302772
+Cake Cases & Baking Accessories,7-Day Rolling Sum Baseline,6,43.77346105067269,-0.8095674626469809
+Cake Cases & Baking Accessories,Linear Regression,6,33.668358125898656,0.22107818878138563
+Cake Cases & Baking Accessories,Random Forest,6,35.17298561586652,0.1467710256182969
+Cake Cases & Baking Accessories,XGBoost,6,33.7450218007407,0.18844716074285983
+Cake Cases & Baking Accessories,7-Day Rolling Sum Baseline,7,49.033353414754366,-1.3629432844255418
+Cake Cases & Baking Accessories,Linear Regression,7,33.268257473451186,0.09692968335292829
+Cake Cases & Baking Accessories,Random Forest,7,28.14685543202439,0.3373999548591843
+Cake Cases & Baking Accessories,XGBoost,7,27.184712330078085,0.38105151677361404
+Cake Cases & Baking Accessories,7-Day Rolling Sum Baseline,8,50.41298015780765,-0.3980885137043786
+Cake Cases & Baking Accessories,Linear Regression,8,33.27442150197318,0.3592906199722652
+Cake Cases & Baking Accessories,Random Forest,8,37.053526741148964,0.36286385794981346
+Cake Cases & Baking Accessories,XGBoost,8,35.38527593756517,0.45155857464851656
+Cake Cases & Baking Accessories,7-Day Rolling Sum Baseline,9,37.20235846850638,-0.4890158063295087
+Cake Cases & Baking Accessories,Linear Regression,9,25.993386251731447,0.36746645959376933
+Cake Cases & Baking Accessories,Random Forest,9,26.938038039118346,0.18165630600557947
+Cake Cases & Baking Accessories,XGBoost,9,25.566624115231427,0.22402202169629437
+Cake Cases & Baking Accessories,7-Day Rolling Sum Baseline,10,43.1097874164428,-0.2168552946222826
+Cake Cases & Baking Accessories,Linear Regression,10,28.459832717093835,0.32155574077283233
+Cake Cases & Baking Accessories,Random Forest,10,34.28429956064342,0.188981404356517
+Cake Cases & Baking Accessories,XGBoost,10,37.95910224899468,-0.05154066027652271
+Cake Cases & Baking Accessories,7-Day Rolling Sum Baseline,11,49.41471284885517,-0.9973923872627584
+Cake Cases & Baking Accessories,Linear Regression,11,32.849675199747445,0.20179221980301987
+Cake Cases & Baking Accessories,Random Forest,11,39.278079272003275,0.03211224099368648
+Cake Cases & Baking Accessories,XGBoost,11,37.543712113369736,0.014296181984539191
+Cake Cases & Baking Accessories,7-Day Rolling Sum Baseline,12,44.7813650504221,-0.7068027221043487
+Cake Cases & Baking Accessories,Linear Regression,12,35.98194097769355,-0.057365012225059075
+Cake Cases & Baking Accessories,Random Forest,12,34.89908446832351,0.0369447327105914
+Cake Cases & Baking Accessories,XGBoost,12,32.33250337607199,0.10281578110495082
+Cake Cases & Baking Accessories,7-Day Rolling Sum Baseline,13,52.646854948419595,-1.2163438779171942
+Cake Cases & Baking Accessories,Linear Regression,13,35.02039067803896,-0.011218818475008385
+Cake Cases & Baking Accessories,Random Forest,13,33.62678251715331,0.12415185026547171
+Cake Cases & Baking Accessories,XGBoost,13,40.12637132798918,-0.15805359815694708
+Cake Cases & Baking Accessories,7-Day Rolling Sum Baseline,14,42.39996707350839,-1.165791918082744
+Cake Cases & Baking Accessories,Linear Regression,14,30.201622010702167,0.22046793115652374
+Cake Cases & Baking Accessories,Random Forest,14,22.19908179988176,0.5324817128231656
+Cake Cases & Baking Accessories,XGBoost,14,32.34311936443686,0.0520978390716893
+Cake Cases & Baking Accessories,7-Day Rolling Sum Baseline,15,51.65993578256227,-0.9807884531942166
+Cake Cases & Baking Accessories,Linear Regression,15,36.59937619847199,-0.01064022741908155
+Cake Cases & Baking Accessories,Random Forest,15,30.584022125087284,0.26764744129202156
+Cake Cases & Baking Accessories,XGBoost,15,32.141655654600804,0.1416763399984775
+Cake Cases & Baking Accessories,7-Day Rolling Sum Baseline,16,48.18071059303895,-0.6243703274268901
+Cake Cases & Baking Accessories,Linear Regression,16,32.621928052838044,0.16620444626452402
+Cake Cases & Baking Accessories,Random Forest,16,33.112425499687184,0.2967268842304638
+Cake Cases & Baking Accessories,XGBoost,16,31.881260640604935,0.1539343902380066
+Cake Cases & Baking Accessories,7-Day Rolling Sum Baseline,17,42.819190971486606,-0.5850813112724658
+Cake Cases & Baking Accessories,Linear Regression,17,30.68756892130192,0.24238839462539463
+Cake Cases & Baking Accessories,Random Forest,17,29.731248045357788,0.20669516009492273
+Cake Cases & Baking Accessories,XGBoost,17,35.02252260462275,-0.11306566123975936
+Cake Cases & Baking Accessories,7-Day Rolling Sum Baseline,18,45.16756367147525,-0.34734703844449655
+Cake Cases & Baking Accessories,Linear Regression,18,37.930006935693214,0.02410753499540219
+Cake Cases & Baking Accessories,Random Forest,18,30.45177083368749,0.22227783338502227
+Cake Cases & Baking Accessories,XGBoost,18,32.39735693201831,0.18727935719217537
+Cake Cases & Baking Accessories,7-Day Rolling Sum Baseline,19,48.18071059303895,-0.6243703274268901
+Cake Cases & Baking Accessories,Linear Regression,19,32.99627048614864,0.17390028889777287
+Cake Cases & Baking Accessories,Random Forest,19,33.56789818564984,0.26676452983601673
+Cake Cases & Baking Accessories,XGBoost,19,30.658633548563607,0.25990382286645974
+Cake Cases & Baking Accessories,7-Day Rolling Sum Baseline,20,46.295281825516184,-0.6220951770126129
+Cake Cases & Baking Accessories,Linear Regression,20,31.19681420921992,0.1022007309440861
+Cake Cases & Baking Accessories,Random Forest,20,30.839045541622262,0.1920496415023969
+Cake Cases & Baking Accessories,XGBoost,20,35.75288367318047,-0.2031461336965048
+Cake Cases & Baking Accessories,7-Day Rolling Sum Baseline,21,43.989436307437614,-0.9758613675610399
+Cake Cases & Baking Accessories,Linear Regression,21,25.722207510839944,0.2660288486379656
+Cake Cases & Baking Accessories,Random Forest,21,32.476026396092486,-0.044072454547512185
+Cake Cases & Baking Accessories,XGBoost,21,36.55178562043628,-0.2925789005588826
+Cake Cases & Baking Accessories,7-Day Rolling Sum Baseline,22,38.36638159792841,-0.41526126362729165
+Cake Cases & Baking Accessories,Linear Regression,22,45.51093127287433,-0.8099140375273222
+Cake Cases & Baking Accessories,Random Forest,22,30.143545348013006,0.14091004604560187
+Cake Cases & Baking Accessories,XGBoost,22,32.80741780597509,0.012446170180248739
+Cake Cases & Baking Accessories,7-Day Rolling Sum Baseline,23,41.8387075575785,-0.3644127470867917
+Cake Cases & Baking Accessories,Linear Regression,23,36.07327312770017,0.1523644558660867
+Cake Cases & Baking Accessories,Random Forest,23,31.7218281239732,0.2893463652293694
+Cake Cases & Baking Accessories,XGBoost,23,32.05189210010329,0.27997198869877526
+Cake Cases & Baking Accessories,7-Day Rolling Sum Baseline,24,57.387304825964414,-1.2063172864261236
+Cake Cases & Baking Accessories,Linear Regression,24,38.34526191510464,0.04899564614923868
+Cake Cases & Baking Accessories,Random Forest,24,35.18138605986202,0.14995663254625968
+Cake Cases & Baking Accessories,XGBoost,24,37.99637154001068,0.04895184210002079
+Cake Cases & Baking Accessories,7-Day Rolling Sum Baseline,25,50.41298015780765,-0.3980885137043786
+Cake Cases & Baking Accessories,Linear Regression,25,32.268383053749346,0.36333930987160645
+Cake Cases & Baking Accessories,Random Forest,25,39.166713389035515,0.3104945890583042
+Cake Cases & Baking Accessories,XGBoost,25,39.605190986496524,0.30265385531027
+Cake Cases & Baking Accessories,7-Day Rolling Sum Baseline,26,44.7813650504221,-0.7068027221043487
+Cake Cases & Baking Accessories,Linear Regression,26,34.60335553690103,0.015925712163872396
+Cake Cases & Baking Accessories,Random Forest,26,35.068090711059455,-0.0371309915588518
+Cake Cases & Baking Accessories,XGBoost,26,33.98492848645733,0.021852943257969715
+Cake Cases & Baking Accessories,7-Day Rolling Sum Baseline,27,48.42662530993614,-0.7458578613837761
+Cake Cases & Baking Accessories,Linear Regression,27,33.86676733156422,0.16752907698449393
+Cake Cases & Baking Accessories,Random Forest,27,33.392249123243694,0.2835424012207739
+Cake Cases & Baking Accessories,XGBoost,27,33.73016073350358,0.16227443526017538
+Cake Cases & Baking Accessories,7-Day Rolling Sum Baseline,28,56.329382029214706,-1.4834610191973523
+Cake Cases & Baking Accessories,Linear Regression,28,36.56496111992515,-0.010328098759861515
+Cake Cases & Baking Accessories,Random Forest,28,37.20106819353154,0.0645801975687752
+Cake Cases & Baking Accessories,XGBoost,28,37.24630083025704,0.01949834946416995
+Cake Cases & Baking Accessories,7-Day Rolling Sum Baseline,29,39.650208382623255,-0.24340530720590392
+Cake Cases & Baking Accessories,Linear Regression,29,30.74871492809754,0.1559266155048038
+Cake Cases & Baking Accessories,Random Forest,29,30.126307168726225,0.18079646551532835
+Cake Cases & Baking Accessories,XGBoost,29,30.78897886116394,0.012058699543052054
+Jumbo Bags & Shoppers,7-Day Rolling Sum Baseline,0,42.67272205944875,0.06931647136778607
+Jumbo Bags & Shoppers,Linear Regression,0,25.485734931405396,0.6844936592156388
+Jumbo Bags & Shoppers,Random Forest,0,31.686134117282588,0.553242813105006
+Jumbo Bags & Shoppers,XGBoost,0,32.1462842546948,0.5616148013693939
+Jumbo Bags & Shoppers,7-Day Rolling Sum Baseline,1,31.518519332920782,0.4192889056776238
+Jumbo Bags & Shoppers,Linear Regression,1,34.00961910396909,0.40230484611371886
+Jumbo Bags & Shoppers,Random Forest,1,38.14332810836111,0.12113916349115705
+Jumbo Bags & Shoppers,XGBoost,1,39.792309317308685,0.10248615850342813
+Jumbo Bags & Shoppers,7-Day Rolling Sum Baseline,2,43.51973081043174,-0.012269506831810384
+Jumbo Bags & Shoppers,Linear Regression,2,31.942597739173817,0.5642907973256911
+Jumbo Bags & Shoppers,Random Forest,2,33.896757050624245,0.5241233669356657
+Jumbo Bags & Shoppers,XGBoost,2,34.08793482899904,0.5012131406462426
+Jumbo Bags & Shoppers,7-Day Rolling Sum Baseline,3,37.94595747340709,-0.12152174793904558
+Jumbo Bags & Shoppers,Linear Regression,3,27.305350643544863,0.4584879768890787
+Jumbo Bags & Shoppers,Random Forest,3,27.539882928694603,0.5127958084073929
+Jumbo Bags & Shoppers,XGBoost,3,27.013519712493473,0.48698821671495385
+Jumbo Bags & Shoppers,7-Day Rolling Sum Baseline,4,32.50928036027836,0.5075417921645887
+Jumbo Bags & Shoppers,Linear Regression,4,43.002737039926465,0.18578054887362583
+Jumbo Bags & Shoppers,Random Forest,4,37.600384120310146,0.2971843520240631
+Jumbo Bags & Shoppers,XGBoost,4,34.8985832966596,0.3587304051184039
+Jumbo Bags & Shoppers,7-Day Rolling Sum Baseline,5,33.07389881733718,0.3116726313942976
+Jumbo Bags & Shoppers,Linear Regression,5,30.97606094377979,0.5654757788595342
+Jumbo Bags & Shoppers,Random Forest,5,32.90346602805863,0.5534036568561569
+Jumbo Bags & Shoppers,XGBoost,5,31.94145504592163,0.5887387685210584
+Jumbo Bags & Shoppers,7-Day Rolling Sum Baseline,6,41.23946524277261,0.1027380424527009
+Jumbo Bags & Shoppers,Linear Regression,6,33.34118863310538,0.5221094243162685
+Jumbo Bags & Shoppers,Random Forest,6,44.73931415326785,0.30199517677333376
+Jumbo Bags & Shoppers,XGBoost,6,43.640566230359404,0.29575412652027233
+Jumbo Bags & Shoppers,7-Day Rolling Sum Baseline,7,37.969679159806816,-0.1469037742940731
+Jumbo Bags & Shoppers,Linear Regression,7,27.625702368980527,0.4134636409398087
+Jumbo Bags & Shoppers,Random Forest,7,29.07451530826431,0.34422815930000494
+Jumbo Bags & Shoppers,XGBoost,7,33.84279234046914,0.2401561876042222
+Jumbo Bags & Shoppers,7-Day Rolling Sum Baseline,8,39.65620012053858,0.15915038506811696
+Jumbo Bags & Shoppers,Linear Regression,8,23.419503133190968,0.6681699296941588
+Jumbo Bags & Shoppers,Random Forest,8,27.711442555417943,0.6211548827266109
+Jumbo Bags & Shoppers,XGBoost,8,29.409677075373665,0.6117417980636809
+Jumbo Bags & Shoppers,7-Day Rolling Sum Baseline,9,35.11862489807728,0.3443858668853209
+Jumbo Bags & Shoppers,Linear Regression,9,32.42811504185375,0.4462571265422254
+Jumbo Bags & Shoppers,Random Forest,9,32.17581998474447,0.4382335934473731
+Jumbo Bags & Shoppers,XGBoost,9,40.931808057088844,0.22759431859714319
+Jumbo Bags & Shoppers,7-Day Rolling Sum Baseline,10,33.99378452101456,0.4786058854664673
+Jumbo Bags & Shoppers,Linear Regression,10,32.94365712795848,0.34803769511867877
+Jumbo Bags & Shoppers,Random Forest,10,29.2407242797237,0.383254908871172
+Jumbo Bags & Shoppers,XGBoost,10,31.861425622878485,0.3593544753324126
+Jumbo Bags & Shoppers,7-Day Rolling Sum Baseline,11,44.163166288550954,-0.041409167069514696
+Jumbo Bags & Shoppers,Linear Regression,11,31.20173108455862,0.526183142145563
+Jumbo Bags & Shoppers,Random Forest,11,36.065752022410976,0.3974667555109225
+Jumbo Bags & Shoppers,XGBoost,11,36.029108729571824,0.40980638901996913
+Jumbo Bags & Shoppers,7-Day Rolling Sum Baseline,12,38.09449617619662,0.27030254234573337
+Jumbo Bags & Shoppers,Linear Regression,12,29.65503330666026,0.5350646030995052
+Jumbo Bags & Shoppers,Random Forest,12,37.507173567855524,0.24276524386684062
+Jumbo Bags & Shoppers,XGBoost,12,39.22891418064716,0.14790935645531156
+Jumbo Bags & Shoppers,7-Day Rolling Sum Baseline,13,37.94595747340709,-0.12152174793904558
+Jumbo Bags & Shoppers,Linear Regression,13,28.776185359640387,0.4261585436639487
+Jumbo Bags & Shoppers,Random Forest,13,29.777198671917226,0.3382952063752912
+Jumbo Bags & Shoppers,XGBoost,13,33.44736463817029,0.2052735167380958
+Jumbo Bags & Shoppers,7-Day Rolling Sum Baseline,14,34.38109698234959,0.09414422050894544
+Jumbo Bags & Shoppers,Linear Regression,14,42.91848034869192,-0.17519875080492997
+Jumbo Bags & Shoppers,Random Forest,14,38.94380337825014,0.05268548456961952
+Jumbo Bags & Shoppers,XGBoost,14,45.160630816005174,-0.11940522370870266
+Jumbo Bags & Shoppers,7-Day Rolling Sum Baseline,15,36.85041970138725,-0.022762565574405924
+Jumbo Bags & Shoppers,Linear Regression,15,20.9764370373304,0.6871532632901135
+Jumbo Bags & Shoppers,Random Forest,15,27.416204188383443,0.4784053228455122
+Jumbo Bags & Shoppers,XGBoost,15,28.32759561319297,0.4466228851213203
+Jumbo Bags & Shoppers,7-Day Rolling Sum Baseline,16,40.334341916132296,0.11893281984023807
+Jumbo Bags & Shoppers,Linear Regression,16,24.762066615135875,0.6449417329170332
+Jumbo Bags & Shoppers,Random Forest,16,32.39283042025742,0.3934290013158446
+Jumbo Bags & Shoppers,XGBoost,16,31.485696518353652,0.36263048969807243
+Jumbo Bags & Shoppers,7-Day Rolling Sum Baseline,17,30.857860811351234,0.44476589120642107
+Jumbo Bags & Shoppers,Linear Regression,17,33.0349204815892,0.4346711539846626
+Jumbo Bags & Shoppers,Random Forest,17,38.589423086006505,0.33100089095905794
+Jumbo Bags & Shoppers,XGBoost,17,41.540657075337364,0.1559201092967215
+Jumbo Bags & Shoppers,7-Day Rolling Sum Baseline,18,29.725503093853888,0.5743037217313747
+Jumbo Bags & Shoppers,Linear Regression,18,27.999702651517712,0.523883346646735
+Jumbo Bags & Shoppers,Random Forest,18,35.37285695399686,0.24784147445315996
+Jumbo Bags & Shoppers,XGBoost,18,36.18248003527642,0.27264674281650314
+Jumbo Bags & Shoppers,7-Day Rolling Sum Baseline,19,40.334341916132296,0.11893281984023807
+Jumbo Bags & Shoppers,Linear Regression,19,25.876830663283528,0.6204916001056839
+Jumbo Bags & Shoppers,Random Forest,19,28.39035436042505,0.596907112372551
+Jumbo Bags & Shoppers,XGBoost,19,31.849060385083504,0.5097720519919623
+Jumbo Bags & Shoppers,7-Day Rolling Sum Baseline,20,30.40478602788633,0.5495438471807339
+Jumbo Bags & Shoppers,Linear Regression,20,24.120118170017296,0.6246262690590927
+Jumbo Bags & Shoppers,Random Forest,20,28.449191875331692,0.48371293284018446
+Jumbo Bags & Shoppers,XGBoost,20,30.440373133221964,0.4599549027846064
+Jumbo Bags & Shoppers,7-Day Rolling Sum Baseline,21,31.518519332920782,0.4192889056776238
+Jumbo Bags & Shoppers,Linear Regression,21,30.363245612364647,0.5021493591176891
+Jumbo Bags & Shoppers,Random Forest,21,31.899974241619883,0.500263438915711
+Jumbo Bags & Shoppers,XGBoost,21,32.86103692904057,0.4624585496664201
+Jumbo Bags & Shoppers,7-Day Rolling Sum Baseline,22,34.85211693271423,0.4526863513226629
+Jumbo Bags & Shoppers,Linear Regression,22,36.54496297154356,0.3783943413397379
+Jumbo Bags & Shoppers,Random Forest,22,36.87891859219166,0.35311985856767614
+Jumbo Bags & Shoppers,XGBoost,22,35.714823720769395,0.19520424374180723
+Jumbo Bags & Shoppers,7-Day Rolling Sum Baseline,23,37.508572269669386,0.21708820466568102
+Jumbo Bags & Shoppers,Linear Regression,23,40.888664320219796,0.27323773864426115
+Jumbo Bags & Shoppers,Random Forest,23,39.94399673501066,0.25743838688575815
+Jumbo Bags & Shoppers,XGBoost,23,42.347973116891886,0.15068272027668483
+Jumbo Bags & Shoppers,7-Day Rolling Sum Baseline,24,33.07181801617447,0.07937785150382903
+Jumbo Bags & Shoppers,Linear Regression,24,28.716282697533757,0.4620283716651403
+Jumbo Bags & Shoppers,Random Forest,24,30.92760732756808,0.4534411283489417
+Jumbo Bags & Shoppers,XGBoost,24,29.936508501008934,0.46975174012803855
+Jumbo Bags & Shoppers,7-Day Rolling Sum Baseline,25,39.65620012053858,0.15915038506811696
+Jumbo Bags & Shoppers,Linear Regression,25,21.46854109636698,0.7322426754119716
+Jumbo Bags & Shoppers,Random Forest,25,26.993489591957026,0.6177260733184369
+Jumbo Bags & Shoppers,XGBoost,25,28.06776765143073,0.6073470305106026
+Jumbo Bags & Shoppers,7-Day Rolling Sum Baseline,26,38.09449617619662,0.27030254234573337
+Jumbo Bags & Shoppers,Linear Regression,26,35.994312949304664,0.4172820086340455
+Jumbo Bags & Shoppers,Random Forest,26,37.036144638222126,0.2477951542098702
+Jumbo Bags & Shoppers,XGBoost,26,35.67344721243676,0.32946826843738153
+Jumbo Bags & Shoppers,7-Day Rolling Sum Baseline,27,43.51973081043174,-0.012269506831810384
+Jumbo Bags & Shoppers,Linear Regression,27,32.096456496031415,0.5434158735340723
+Jumbo Bags & Shoppers,Random Forest,27,36.23977108592642,0.4763847825791516
+Jumbo Bags & Shoppers,XGBoost,27,39.65381919787186,0.3446341926788844
+Jumbo Bags & Shoppers,7-Day Rolling Sum Baseline,28,41.302938315994226,-0.2596670148838205
+Jumbo Bags & Shoppers,Linear Regression,28,28.18266398055023,0.4882121905725316
+Jumbo Bags & Shoppers,Random Forest,28,27.503129512834875,0.476787714350565
+Jumbo Bags & Shoppers,XGBoost,28,30.931659145467087,0.3136141390376561
+Jumbo Bags & Shoppers,7-Day Rolling Sum Baseline,29,34.04187197098889,0.47001341135672325
+Jumbo Bags & Shoppers,Linear Regression,29,29.31464001008151,0.4726974765597458
+Jumbo Bags & Shoppers,Random Forest,29,28.850580019817063,0.37351363267141124
+Jumbo Bags & Shoppers,XGBoost,29,30.495040738145573,0.37508566957574396
+Christmas Decorations,7-Day Rolling Sum Baseline,0,21.155543298400442,0.9278765601196541
+Christmas Decorations,Linear Regression,0,30.961991802682448,0.8658450233310999
+Christmas Decorations,Random Forest,0,21.64312307934757,0.9276890885074613
+Christmas Decorations,XGBoost,0,24.931588527976118,0.915849363908359
+Christmas Decorations,7-Day Rolling Sum Baseline,1,30.177510717790675,0.8241019124989073
+Christmas Decorations,Linear Regression,1,54.626085699211956,0.6064521678797701
+Christmas Decorations,Random Forest,1,30.9526643825003,0.8525042211347642
+Christmas Decorations,XGBoost,1,30.98618592751428,0.8615863910647418
+Christmas Decorations,7-Day Rolling Sum Baseline,2,21.09410051556535,0.9283963473854975
+Christmas Decorations,Linear Regression,2,73.23726275438828,0.510331532705062
+Christmas Decorations,Random Forest,2,31.16823960014168,0.8632260411001852
+Christmas Decorations,XGBoost,2,34.28019893732866,0.8596715183403281
+Christmas Decorations,7-Day Rolling Sum Baseline,3,18.489471422432317,0.9459261457068893
+Christmas Decorations,Linear Regression,3,86.73027077922896,-0.028303837887572403
+Christmas Decorations,Random Forest,3,38.89877337867379,0.8300991951264133
+Christmas Decorations,XGBoost,3,27.73026181110158,0.864458712226917
+Christmas Decorations,7-Day Rolling Sum Baseline,4,20.01605189561303,0.9180952291883334
+Christmas Decorations,Linear Regression,4,37.88232330188184,0.8243490538269638
+Christmas Decorations,Random Forest,4,20.575199821277863,0.9448833011662281
+Christmas Decorations,XGBoost,4,19.77478703054411,0.9400590060158034
+Christmas Decorations,7-Day Rolling Sum Baseline,5,30.472373839558138,0.8469059722412977
+Christmas Decorations,Linear Regression,5,30.349070652510658,0.8241544622267141
+Christmas Decorations,Random Forest,5,30.12876757333472,0.8611531025924187
+Christmas Decorations,XGBoost,5,33.74678267599262,0.8273086692489694
+Christmas Decorations,7-Day Rolling Sum Baseline,6,19.697484569974474,0.9291916686434675
+Christmas Decorations,Linear Regression,6,38.761751732725266,0.8066919536520911
+Christmas Decorations,Random Forest,6,23.231608436924585,0.9276082189017293
+Christmas Decorations,XGBoost,6,26.25222692264355,0.9044702433975746
+Christmas Decorations,7-Day Rolling Sum Baseline,7,19.680831271279466,0.944894014623603
+Christmas Decorations,Linear Regression,7,93.60799569192237,0.11151917918151466
+Christmas Decorations,Random Forest,7,48.583901560959276,0.7239842190165451
+Christmas Decorations,XGBoost,7,29.0972105591647,0.7999860172266673
+Christmas Decorations,7-Day Rolling Sum Baseline,8,21.273725718621503,0.9252942532499125
+Christmas Decorations,Linear Regression,8,41.550773728684845,0.7678995939596137
+Christmas Decorations,Random Forest,8,26.707751646860906,0.9104681715462601
+Christmas Decorations,XGBoost,8,26.4349825574986,0.9059685101869669
+Christmas Decorations,7-Day Rolling Sum Baseline,9,21.476714676510333,0.9170988305910076
+Christmas Decorations,Linear Regression,9,71.30112574941148,0.41458062093412495
+Christmas Decorations,Random Forest,9,41.77486734122145,0.8206303757503763
+Christmas Decorations,XGBoost,9,32.518432633909256,0.8561034756492415
+Christmas Decorations,7-Day Rolling Sum Baseline,10,20.49257698326613,0.9173616722996597
+Christmas Decorations,Linear Regression,10,28.02292042414925,0.8958156063023478
+Christmas Decorations,Random Forest,10,21.412819918359236,0.9393657636751344
+Christmas Decorations,XGBoost,10,22.68994488901336,0.9387371614622624
+Christmas Decorations,7-Day Rolling Sum Baseline,11,19.79592639194715,0.9288397179833592
+Christmas Decorations,Linear Regression,11,62.82852525423773,0.6237956056337982
+Christmas Decorations,Random Forest,11,33.28080567788613,0.8499805585824628
+Christmas Decorations,XGBoost,11,37.421090281133424,0.8438740671404364
+Christmas Decorations,7-Day Rolling Sum Baseline,12,19.186561322308393,0.9217924146370631
+Christmas Decorations,Linear Regression,12,67.91413825663992,0.6491520467711197
+Christmas Decorations,Random Forest,12,28.300992843484917,0.8880914433216267
+Christmas Decorations,XGBoost,12,32.86472468446266,0.8660970423212149
+Christmas Decorations,7-Day Rolling Sum Baseline,13,18.489471422432317,0.9459261457068893
+Christmas Decorations,Linear Regression,13,80.02219653855035,0.26585704686823874
+Christmas Decorations,Random Forest,13,55.29969077558342,0.6849818631059754
+Christmas Decorations,XGBoost,13,41.70127331668184,0.748800775291729
+Christmas Decorations,7-Day Rolling Sum Baseline,14,19.5636105055344,0.9452930373923091
+Christmas Decorations,Linear Regression,14,38.07807522480045,0.7972283361624973
+Christmas Decorations,Random Forest,14,21.20488271564509,0.9420477099733604
+Christmas Decorations,XGBoost,14,17.20590591341433,0.9539110009895013
+Christmas Decorations,7-Day Rolling Sum Baseline,15,19.751683540884663,0.9439556607037107
+Christmas Decorations,Linear Regression,15,27.70143996503031,0.9107262044702824
+Christmas Decorations,Random Forest,15,18.945346627795423,0.9541290349018807
+Christmas Decorations,XGBoost,15,16.56976904504489,0.9534741196209845
+Christmas Decorations,7-Day Rolling Sum Baseline,16,20.98148367182641,0.9250104068454973
+Christmas Decorations,Linear Regression,16,34.93598953145392,0.8294820596051325
+Christmas Decorations,Random Forest,16,25.14666549659854,0.9089845947678385
+Christmas Decorations,XGBoost,16,25.803322072739437,0.9030645777092682
+Christmas Decorations,7-Day Rolling Sum Baseline,17,31.322477815111572,0.8236890581108542
+Christmas Decorations,Linear Regression,17,46.50628104774533,0.6417224077387175
+Christmas Decorations,Random Forest,17,29.808772292582063,0.8664102349264944
+Christmas Decorations,XGBoost,17,33.838728274281884,0.8341281821366167
+Christmas Decorations,7-Day Rolling Sum Baseline,18,31.38579879615736,0.823291317633451
+Christmas Decorations,Linear Regression,18,46.98784755855176,0.6706218172740364
+Christmas Decorations,Random Forest,18,26.00321139683689,0.8786351265687431
+Christmas Decorations,XGBoost,18,29.01638574778352,0.8604404456222282
+Christmas Decorations,7-Day Rolling Sum Baseline,19,20.98148367182641,0.9250104068454973
+Christmas Decorations,Linear Regression,19,41.736214485602154,0.7705822632284122
+Christmas Decorations,Random Forest,19,25.329783702731472,0.913767664169659
+Christmas Decorations,XGBoost,19,25.692268716791517,0.903970829112284
+Christmas Decorations,7-Day Rolling Sum Baseline,20,30.239715994278527,0.8237029865765804
+Christmas Decorations,Linear Regression,20,41.19711580366096,0.7094740870756222
+Christmas Decorations,Random Forest,20,24.794904096368935,0.8947272108337542
+Christmas Decorations,XGBoost,20,27.836989873913424,0.8700846920010733
+Christmas Decorations,7-Day Rolling Sum Baseline,21,30.177510717790675,0.8241019124989073
+Christmas Decorations,Linear Regression,21,42.25599911768062,0.7204785130073509
+Christmas Decorations,Random Forest,21,29.037699075429142,0.87202214087443
+Christmas Decorations,XGBoost,21,30.720876879367047,0.8547123269641814
+Christmas Decorations,7-Day Rolling Sum Baseline,22,19.07616618859421,0.9222123889293412
+Christmas Decorations,Linear Regression,22,47.707107824291874,0.7752979734918544
+Christmas Decorations,Random Forest,22,19.238260705024278,0.953971408544447
+Christmas Decorations,XGBoost,22,20.060276621897742,0.9422153186714903
+Christmas Decorations,7-Day Rolling Sum Baseline,23,21.124783155562564,0.9261941388724151
+Christmas Decorations,Linear Regression,23,34.362716774339,0.8325555473788968
+Christmas Decorations,Random Forest,23,26.12320802834075,0.9094463696235978
+Christmas Decorations,XGBoost,23,25.892378821253086,0.904609139760748
+Christmas Decorations,7-Day Rolling Sum Baseline,24,29.95553108426917,0.8221721730920379
+Christmas Decorations,Linear Regression,24,41.11490156572494,0.7305209731954689
+Christmas Decorations,Random Forest,24,43.02165900027148,0.7297260256219176
+Christmas Decorations,XGBoost,24,38.77530154208778,0.7451799605915475
+Christmas Decorations,7-Day Rolling Sum Baseline,25,21.273725718621503,0.9252942532499125
+Christmas Decorations,Linear Regression,25,27.191206661239427,0.8576744719690359
+Christmas Decorations,Random Forest,25,23.70026173496174,0.918622122240184
+Christmas Decorations,XGBoost,25,24.941503505915172,0.9147520031954796
+Christmas Decorations,7-Day Rolling Sum Baseline,26,19.186561322308393,0.9217924146370631
+Christmas Decorations,Linear Regression,26,53.32933467345949,0.7354911873128922
+Christmas Decorations,Random Forest,26,29.520894200784518,0.8735884234315225
+Christmas Decorations,XGBoost,26,37.31409843336375,0.8446207679153185
+Christmas Decorations,7-Day Rolling Sum Baseline,27,21.09410051556535,0.9283963473854975
+Christmas Decorations,Linear Regression,27,56.28844895231585,0.7319972411166221
+Christmas Decorations,Random Forest,27,30.019447833444847,0.8773337654176278
+Christmas Decorations,XGBoost,27,30.643023482986315,0.8771658441085529
+Christmas Decorations,7-Day Rolling Sum Baseline,28,17.00438262287603,0.9503227089134748
+Christmas Decorations,Linear Regression,28,69.27432191128112,0.47630630814108155
+Christmas Decorations,Random Forest,28,40.91085269436665,0.7637361621032976
+Christmas Decorations,XGBoost,28,41.98635666984637,0.7550103575641804
+Christmas Decorations,7-Day Rolling Sum Baseline,29,21.541462851297958,0.9164879847739102
+Christmas Decorations,Linear Regression,29,29.51550079481787,0.8876677260125608
+Christmas Decorations,Random Forest,29,21.20884854284041,0.9402633695534391
+Christmas Decorations,XGBoost,29,22.612501773321792,0.9374869576501192
+Jewellery - Earrings,7-Day Rolling Sum Baseline,0,134.14905450500555,-0.4673124928414518
+Jewellery - Earrings,Linear Regression,0,99.21107930601961,0.1188614237659602
+Jewellery - Earrings,Random Forest,0,83.52169076751946,0.36648260981239944
+Jewellery - Earrings,XGBoost,0,66.09782209032149,0.46461947782681
+Jewellery - Earrings,7-Day Rolling Sum Baseline,1,105.28967254408062,-0.14007311090692554
+Jewellery - Earrings,Linear Regression,1,89.37295353406681,-0.09195592773905892
+Jewellery - Earrings,Random Forest,1,70.76007556675063,0.24538200758320816
+Jewellery - Earrings,XGBoost,1,73.25873684848085,0.18866389066376088
+Jewellery - Earrings,7-Day Rolling Sum Baseline,2,116.79021497405486,-0.3726381162665504
+Jewellery - Earrings,Linear Regression,2,96.81862843057833,-0.006103754517647886
+Jewellery - Earrings,Random Forest,2,73.78928836174946,0.18982930067383919
+Jewellery - Earrings,XGBoost,2,74.56421051491976,0.12040516534402035
+Jewellery - Earrings,7-Day Rolling Sum Baseline,3,82.62994224788983,-0.16014568086385483
+Jewellery - Earrings,Linear Regression,3,69.56696350209144,0.20991186699436581
+Jewellery - Earrings,Random Forest,3,77.19035984007108,-0.14282252975378085
+Jewellery - Earrings,XGBoost,3,83.62326823251081,-0.21900046911549054
+Jewellery - Earrings,7-Day Rolling Sum Baseline,4,105.00871080139373,-0.15049031933618306
+Jewellery - Earrings,Linear Regression,4,91.96762985868855,-0.05152328726732902
+Jewellery - Earrings,Random Forest,4,76.99259581881533,0.23990814702395913
+Jewellery - Earrings,XGBoost,4,73.53080057308648,0.18425004433107806
+Jewellery - Earrings,7-Day Rolling Sum Baseline,5,109.29328621908128,-0.33688810861977236
+Jewellery - Earrings,Linear Regression,5,110.25806555165114,-0.6456489462725181
+Jewellery - Earrings,Random Forest,5,74.88816254416962,0.19424692113856423
+Jewellery - Earrings,XGBoost,5,72.93762806026336,0.22773501791643003
+Jewellery - Earrings,7-Day Rolling Sum Baseline,6,117.33975546498702,-0.37295198176231326
+Jewellery - Earrings,Linear Regression,6,102.58144379780441,-0.15943516927604495
+Jewellery - Earrings,Random Forest,6,72.91052241570951,0.2231635742121607
+Jewellery - Earrings,XGBoost,6,72.4144522372596,0.24752714210016025
+Jewellery - Earrings,7-Day Rolling Sum Baseline,7,81.1195024433585,-0.15651524382996884
+Jewellery - Earrings,Linear Regression,7,96.03505472331462,-0.06987728608837829
+Jewellery - Earrings,Random Forest,7,77.85650821856952,-0.1424994878094532
+Jewellery - Earrings,XGBoost,7,79.88874523547531,-0.1683995901550317
+Jewellery - Earrings,7-Day Rolling Sum Baseline,8,127.13093942691332,-0.4457893464758438
+Jewellery - Earrings,Linear Regression,8,110.93154016070505,-0.43771741416134224
+Jewellery - Earrings,Random Forest,8,80.70076169749728,0.18719878423605385
+Jewellery - Earrings,XGBoost,8,78.94565108724379,0.22598014374370212
+Jewellery - Earrings,7-Day Rolling Sum Baseline,9,104.35729847494552,-0.15002073532073723
+Jewellery - Earrings,Linear Regression,9,100.78469786009254,-0.32826592821783307
+Jewellery - Earrings,Random Forest,9,76.93877995642701,0.22384193828503784
+Jewellery - Earrings,XGBoost,9,74.29086926196395,0.12098312592761795
+Jewellery - Earrings,7-Day Rolling Sum Baseline,10,126.24237140366172,-0.29260524939786525
+Jewellery - Earrings,Linear Regression,10,101.46590256267297,-0.08156014655007238
+Jewellery - Earrings,Random Forest,10,81.57715780296427,0.24152391550939345
+Jewellery - Earrings,XGBoost,10,81.61302342452271,0.1558830323259357
+Jewellery - Earrings,7-Day Rolling Sum Baseline,11,117.81226903178124,-0.3768800377349639
+Jewellery - Earrings,Linear Regression,11,109.94738383441272,-0.5557930535655968
+Jewellery - Earrings,Random Forest,11,70.50480413895048,0.21752353266671698
+Jewellery - Earrings,XGBoost,11,70.60955590172688,0.25073158208895385
+Jewellery - Earrings,7-Day Rolling Sum Baseline,12,115.25727069351231,-0.19311804650708586
+Jewellery - Earrings,Linear Regression,12,95.93133893620568,-0.07893024506100432
+Jewellery - Earrings,Random Forest,12,70.1572706935123,0.2797021742175979
+Jewellery - Earrings,XGBoost,12,74.13920205178144,0.22247942290519207
+Jewellery - Earrings,7-Day Rolling Sum Baseline,13,82.62994224788983,-0.16014568086385483
+Jewellery - Earrings,Linear Regression,13,64.42060366455466,0.2781418736180191
+Jewellery - Earrings,Random Forest,13,78.55619724566859,-0.1649875622280359
+Jewellery - Earrings,XGBoost,13,83.99651551553802,-0.1642375938191034
+Jewellery - Earrings,7-Day Rolling Sum Baseline,14,80.4367201426025,-0.14914954531524738
+Jewellery - Earrings,Linear Regression,14,75.01312485369225,0.1526326885413617
+Jewellery - Earrings,Random Forest,14,82.2141265597148,-0.16408261752646247
+Jewellery - Earrings,XGBoost,14,79.66461803186387,-0.1252514533254656
+Jewellery - Earrings,7-Day Rolling Sum Baseline,15,101.91111111111111,-0.3814424845720221
+Jewellery - Earrings,Linear Regression,15,78.02622157811726,0.16317431154326467
+Jewellery - Earrings,Random Forest,15,76.8311111111111,-0.10286391237640857
+Jewellery - Earrings,XGBoost,15,85.3858664618598,-0.1835437915835063
+Jewellery - Earrings,7-Day Rolling Sum Baseline,16,126.87160940325496,-0.4486556662140331
+Jewellery - Earrings,Linear Regression,16,111.96951622233331,-0.014988114751492754
+Jewellery - Earrings,Random Forest,16,81.1372513562387,0.09608734338181779
+Jewellery - Earrings,XGBoost,16,78.82302139378801,0.20631873765012787
+Jewellery - Earrings,7-Day Rolling Sum Baseline,17,104.08593091828138,-0.13502393045211591
+Jewellery - Earrings,Linear Regression,17,100.87066918078627,-0.2896797188880489
+Jewellery - Earrings,Random Forest,17,72.35657118786857,0.2534392625732026
+Jewellery - Earrings,XGBoost,17,78.22432528048276,0.16782717535159408
+Jewellery - Earrings,7-Day Rolling Sum Baseline,18,123.80952380952381,-0.2715997616192054
+Jewellery - Earrings,Linear Regression,18,100.27963865785303,-0.10501073514544434
+Jewellery - Earrings,Random Forest,18,80.02865571007163,0.2352359703152076
+Jewellery - Earrings,XGBoost,18,83.80906508534557,0.15219938170382263
+Jewellery - Earrings,7-Day Rolling Sum Baseline,19,126.87160940325496,-0.4486556662140331
+Jewellery - Earrings,Linear Regression,19,111.33832623847677,0.016523911387412715
+Jewellery - Earrings,Random Forest,19,82.55858951175406,0.08364941405933346
+Jewellery - Earrings,XGBoost,19,77.25955720835957,0.19608741302235277
+Jewellery - Earrings,7-Day Rolling Sum Baseline,20,124.94750104997901,-0.27700435857350536
+Jewellery - Earrings,Linear Regression,20,103.79011303027386,0.06379598038272949
+Jewellery - Earrings,Random Forest,20,77.68773624527509,0.2677426323875133
+Jewellery - Earrings,XGBoost,20,82.84953702452403,0.14575731801215885
+Jewellery - Earrings,7-Day Rolling Sum Baseline,21,105.28967254408062,-0.14007311090692554
+Jewellery - Earrings,Linear Regression,21,87.00979350211209,0.15688952057002892
+Jewellery - Earrings,Random Forest,21,68.84235936188078,0.2992329422667387
+Jewellery - Earrings,XGBoost,21,76.47483290793214,0.17579031967544323
+Jewellery - Earrings,7-Day Rolling Sum Baseline,22,114.67684021543985,-0.18845310247073477
+Jewellery - Earrings,Linear Regression,22,98.13144512319933,-0.09094041591643043
+Jewellery - Earrings,Random Forest,22,69.88846499102334,0.28538440818293453
+Jewellery - Earrings,XGBoost,22,73.47586930493692,0.22464528857701482
+Jewellery - Earrings,7-Day Rolling Sum Baseline,23,109.66921119592877,-0.34656858757020825
+Jewellery - Earrings,Linear Regression,23,105.27970983716119,-0.5344593981818968
+Jewellery - Earrings,Random Forest,23,80.15921483097055,0.10010461445268082
+Jewellery - Earrings,XGBoost,23,72.41515178153489,0.21113271979601544
+Jewellery - Earrings,7-Day Rolling Sum Baseline,24,83.09012875536482,-0.13525916616668887
+Jewellery - Earrings,Linear Regression,24,74.5493807966781,0.1662218510039336
+Jewellery - Earrings,Random Forest,24,84.33562231759657,-0.16789089235145926
+Jewellery - Earrings,XGBoost,24,86.84095828318289,-0.29935868308756985
+Jewellery - Earrings,7-Day Rolling Sum Baseline,25,127.13093942691332,-0.4457893464758438
+Jewellery - Earrings,Linear Regression,25,108.41042086350225,-0.1707642444147477
+Jewellery - Earrings,Random Forest,25,82.35981138919114,0.4060963796694014
+Jewellery - Earrings,XGBoost,25,77.45388177671768,0.402918381243921
+Jewellery - Earrings,7-Day Rolling Sum Baseline,26,115.25727069351231,-0.19311804650708586
+Jewellery - Earrings,Linear Regression,26,105.87744316719817,-0.2820229984082079
+Jewellery - Earrings,Random Forest,26,71.21364653243847,0.2839937215338205
+Jewellery - Earrings,XGBoost,26,71.75724470642055,0.23208100415427557
+Jewellery - Earrings,7-Day Rolling Sum Baseline,27,116.79021497405486,-0.3726381162665504
+Jewellery - Earrings,Linear Regression,27,99.54194699875987,-0.04203255680449769
+Jewellery - Earrings,Random Forest,27,76.08005930318754,0.4020279179637619
+Jewellery - Earrings,XGBoost,27,64.19433055982667,0.46627541595069644
+Jewellery - Earrings,7-Day Rolling Sum Baseline,28,91.60200821542675,-0.2260126606247994
+Jewellery - Earrings,Linear Regression,28,73.37935471861142,0.21432800111261097
+Jewellery - Earrings,Random Forest,28,81.5963030579644,-0.09835184089257476
+Jewellery - Earrings,XGBoost,28,85.87949118185458,-0.1894581815691978
+Jewellery - Earrings,7-Day Rolling Sum Baseline,29,124.76024411508281,-0.2902944043593185
+Jewellery - Earrings,Linear Regression,29,107.02274200024307,0.015119254630323375
+Jewellery - Earrings,Random Forest,29,81.67829119442021,0.2340287189806427
+Jewellery - Earrings,XGBoost,29,78.46971208776925,0.166817251348372
