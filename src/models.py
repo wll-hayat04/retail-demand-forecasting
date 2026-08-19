@@ -118,7 +118,15 @@ def enable_tabfm(backend: str = "pytorch", max_context_rows=None,
         else:
             from tabfm import tabfm_v1_0_0_jax as tabfm_v1
 
-        TABFM_MODEL = tabfm_v1.load()
+        import os as _os, torch as _torch
+        _torch.set_num_threads(_os.cpu_count())
+        # float32: bfloat16 is designed for GPU and is emulated (slowly) on
+        # CPUs without native support. Measured ~2x faster here.
+        # bfloat16 is native on GPU; on CPU it is emulated and slow, but
+        # float32 doubles memory and can exhaust the Windows paging file.
+        _device = "cuda" if _torch.cuda.is_available() else None
+        print(f"TabFM device: {_device or 'cpu'}")
+        TABFM_MODEL = tabfm_v1.load(model_type="regression", device=_device)
     except Exception as exc:
         print(f"TabFM unavailable ({type(exc).__name__}: {exc})")
         return False
@@ -143,8 +151,12 @@ def enable_tabfm(backend: str = "pytorch", max_context_rows=None,
             random_state=config.RANDOM_STATE,
         )
         reg.fit(_prep(train, features), train[target])
+        # Train predictions skipped: TabFM predicts rows sitting inside its
+        # own context, so a train score measures recall, not fit. It was also
+        # ~70% of the inference cost.
+        import numpy as _np
         return (
-            reg.predict(_prep(train, features)),
+            _np.full(len(train), _np.nan),
             reg.predict(_prep(val, features)),
             reg.predict(_prep(test, features)),
         )
