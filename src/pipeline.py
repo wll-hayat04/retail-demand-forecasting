@@ -95,7 +95,7 @@ def optimize_horizons(daily, category, X_range=range(1, 29),
 
 
 def run_pipeline(daily, category, X=config.DEFAULT_X, Y=config.DEFAULT_Y,
-                 n_features=None, verbose=True) -> dict | None:
+                 n_features=None, verbose=True, stratified=True) -> dict | None:
     """Full run for one category at fixed X and Y."""
     if verbose:
         print(f"\n{'=' * 60}\n{category}  (X={X}, Y={Y})")
@@ -108,7 +108,8 @@ def run_pipeline(daily, category, X=config.DEFAULT_X, Y=config.DEFAULT_Y,
 
     target = config.target_name(X, Y)
     features = feat.available_features(data)
-    splits = spl.block_shuffled_split(data)
+    splits = (spl.stratified_block_split(data, target)
+              if stratified else spl.block_shuffled_split(data))
 
     if n_features is not None:
         features = select_features(splits["train"], features, target,
