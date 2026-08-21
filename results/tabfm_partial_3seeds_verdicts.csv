@@ -1,9 +1,0 @@
-Category,vs,mean_diff,ci_low,ci_high,tabfm_wins_%,verdict
-Tealight Holders & Sets,Random Forest,-4.906,-10.703,0.89,66.7,within noise
-Tealight Holders & Sets,XGBoost,-4.344,-10.277,1.59,66.7,within noise
-Tealight Holders & Sets,Linear Regression,-8.816,-11.255,-6.377,100.0,TabFM better
-Tealight Holders & Sets,7-Day Rolling Sum Baseline,-3.897,-12.255,4.461,66.7,within noise
-Jewellery - Earrings,Random Forest,-4.695,-17.263,7.873,66.7,within noise
-Jewellery - Earrings,XGBoost,0.021,-18.783,18.826,33.3,within noise
-Jewellery - Earrings,Linear Regression,-23.806,-39.745,-7.866,100.0,TabFM better
-Jewellery - Earrings,7-Day Rolling Sum Baseline,-47.415,-65.286,-29.544,100.0,TabFM better
