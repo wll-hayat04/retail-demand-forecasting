@@ -26,6 +26,9 @@ for i, cat in enumerate(cats, 1):
         "test_R2": best_val["Test R2"],
         "gap": round(best_val["Test WAPE (%)"] - best_val["Validation WAPE (%)"], 2),
         "best_on_test": best_test["Model"],
+        "best_test_WAPE": best_test["Test WAPE (%)"],
+        "selection_loss": round(best_val["Test WAPE (%)"]
+                                - best_test["Test WAPE (%)"], 2),
         "selection_correct": best_val["Model"] == best_test["Model"],
         "leakage": round(res["leakage_ratio"], 3),
     })
