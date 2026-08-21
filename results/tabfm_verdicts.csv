@@ -1,0 +1,21 @@
+Category,vs,mean_diff,ci_low,ci_high,tabfm_wins_%,verdict
+Tealight Holders & Sets,Random Forest,-4.509,-5.848,-3.17,90.0,TabFM better
+Tealight Holders & Sets,XGBoost,-5.08,-6.782,-3.378,86.7,TabFM better
+Tealight Holders & Sets,Linear Regression,-7.49,-10.045,-4.934,90.0,TabFM better
+Tealight Holders & Sets,7-Day Rolling Sum Baseline,-4.121,-5.662,-2.579,86.7,TabFM better
+Cake Cases & Baking Accessories,Random Forest,0.877,-0.226,1.981,43.3,within noise
+Cake Cases & Baking Accessories,XGBoost,-0.098,-1.732,1.536,46.7,within noise
+Cake Cases & Baking Accessories,Linear Regression,0.097,-1.801,1.994,36.7,within noise
+Cake Cases & Baking Accessories,7-Day Rolling Sum Baseline,-12.908,-14.867,-10.948,100.0,TabFM better
+Jumbo Bags & Shoppers,Random Forest,-2.122,-3.191,-1.053,73.3,TabFM better
+Jumbo Bags & Shoppers,XGBoost,-3.624,-4.744,-2.503,90.0,TabFM better
+Jumbo Bags & Shoppers,Linear Regression,0.495,-0.745,1.735,43.3,within noise
+Jumbo Bags & Shoppers,7-Day Rolling Sum Baseline,-5.855,-8.63,-3.08,76.7,TabFM better
+Christmas Decorations,Random Forest,-3.025,-4.553,-1.497,76.7,TabFM better
+Christmas Decorations,XGBoost,-2.471,-4.733,-0.208,70.0,TabFM better
+Christmas Decorations,Linear Regression,-22.692,-27.682,-17.702,100.0,TabFM better
+Christmas Decorations,7-Day Rolling Sum Baseline,3.969,0.68,7.257,40.0,TabFM worse
+Jewellery - Earrings,Random Forest,-4.64,-7.354,-1.925,73.3,TabFM better
+Jewellery - Earrings,XGBoost,-4.247,-7.928,-0.567,66.7,TabFM better
+Jewellery - Earrings,Linear Regression,-22.692,-27.657,-17.726,100.0,TabFM better
+Jewellery - Earrings,7-Day Rolling Sum Baseline,-36.825,-41.805,-31.844,100.0,TabFM better

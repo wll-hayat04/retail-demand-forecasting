@@ -1,0 +1,26 @@
+Category,Model,wape_mean,wape_std,wape_min,wape_max,r2_mean,win_rate
+Cake Cases & Baking Accessories,Random Forest,32.581,3.94,22.199,39.278,0.195,0.267
+Cake Cases & Baking Accessories,Linear Regression,33.362,4.584,23.893,45.511,0.128,0.3
+Cake Cases & Baking Accessories,TabFM,33.458,3.393,26.14,38.24,0.164,0.2
+Cake Cases & Baking Accessories,XGBoost,33.557,3.808,24.83,40.126,0.11,0.233
+Cake Cases & Baking Accessories,7-Day Rolling Sum Baseline,46.366,5.556,31.976,57.387,-0.738,0.0
+Christmas Decorations,7-Day Rolling Sum Baseline,22.539,4.611,17.004,31.386,0.906,0.533
+Christmas Decorations,TabFM,26.507,7.74,17.044,44.466,0.912,0.333
+Christmas Decorations,XGBoost,28.978,6.686,16.57,41.986,0.873,0.1
+Christmas Decorations,Random Forest,29.532,8.958,18.945,55.3,0.874,0.033
+Christmas Decorations,Linear Regression,49.199,18.564,27.191,93.608,0.674,0.0
+Jewellery - Earrings,TabFM,73.156,9.034,58.132,94.879,0.37,0.633
+Jewellery - Earrings,XGBoost,77.403,5.711,66.427,89.453,0.124,0.267
+Jewellery - Earrings,Random Forest,77.795,4.579,68.842,86.148,0.149,0.1
+Jewellery - Earrings,Linear Regression,95.847,13.967,64.463,114.814,-0.082,0.0
+Jewellery - Earrings,7-Day Rolling Sum Baseline,109.98,16.085,81.12,135.41,-0.274,0.0
+Jumbo Bags & Shoppers,Linear Regression,30.512,5.595,20.976,43.003,0.479,0.433
+Jumbo Bags & Shoppers,TabFM,31.008,5.352,22.769,42.098,0.411,0.367
+Jumbo Bags & Shoppers,Random Forest,33.13,4.699,26.993,44.739,0.399,0.0
+Jumbo Bags & Shoppers,XGBoost,34.631,4.918,27.014,45.161,0.348,0.033
+Jumbo Bags & Shoppers,7-Day Rolling Sum Baseline,36.863,4.252,29.726,44.163,0.196,0.167
+Tealight Holders & Sets,TabFM,17.755,3.45,12.954,24.766,0.648,0.7
+Tealight Holders & Sets,7-Day Rolling Sum Baseline,21.875,5.368,14.571,31.428,0.379,0.133
+Tealight Holders & Sets,Random Forest,22.263,6.301,14.2,33.641,0.399,0.033
+Tealight Holders & Sets,XGBoost,22.834,7.278,15.084,35.859,0.325,0.067
+Tealight Holders & Sets,Linear Regression,25.244,8.608,13.948,44.935,0.228,0.067
