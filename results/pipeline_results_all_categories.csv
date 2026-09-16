@@ -1,55 +1,55 @@
-Category,n_rows,selected_model,val_WAPE,test_WAPE,test_R2,gap,best_on_test,best_test_WAPE,selection_loss,selection_correct,leakage
-"Bag Charms, Key Rings & Phone Charms",333,7-Day Rolling Sum Baseline,49.754,49.639,-0.27,-0.11,Random Forest,37.289,12.35,False,0.462
-"Bags, Purses & Backpacks",333,7-Day Rolling Sum Baseline,23.424,22.072,-0.857,-1.35,Linear Regression,16.679,5.39,False,0.714
-"Baskets, Hampers & Wicker",333,7-Day Rolling Sum Baseline,33.535,27.855,0.523,-5.68,7-Day Rolling Sum Baseline,27.855,0.0,True,0.714
-Cake Cases & Baking Accessories,333,Random Forest,29.706,20.725,-0.281,-8.98,Random Forest,20.725,0.0,True,0.714
-Cake Stands,333,XGBoost,31.847,23.533,-0.003,-8.31,Random Forest,20.62,2.91,False,0.571
-"Candles, Incense & Matches",333,Random Forest,19.997,43.342,-1.674,23.34,Linear Regression,36.327,7.02,False,0.714
-Children's Toys & Playsets,333,XGBoost,26.278,15.645,0.637,-10.63,XGBoost,15.645,0.0,True,0.462
-Christmas Decorations,333,Random Forest,18.296,21.562,0.905,3.27,Random Forest,21.562,0.0,True,0.571
-Clocks & Timepieces,333,XGBoost,31.109,36.056,-0.152,4.95,Linear Regression,21.614,14.44,False,0.714
-"Clothing, Accessories & Beauty",333,XGBoost,55.594,36.841,0.28,-18.75,XGBoost,36.841,0.0,True,0.714
-"Coat Racks, Hooks & Hangers",333,Random Forest,30.424,24.189,0.03,-6.24,Random Forest,24.189,0.0,True,0.857
-Colouring & Art Supplies,333,Random Forest,28.067,27.844,-0.066,-0.22,Linear Regression,27.268,0.58,False,0.769
-"Cushions, Quilts & Home Textiles",333,Random Forest,33.561,33.531,0.195,-0.03,Random Forest,33.531,0.0,True,0.286
-Cutlery & Chopping Boards,333,Random Forest,35.237,22.088,-0.163,-13.15,XGBoost,17.898,4.19,False,0.429
-Decorative Hanging Ornaments & Figurines,333,Linear Regression,23.303,26.276,0.514,2.97,Random Forest,15.462,10.81,False,0.615
-Doormats & Doorstops,333,Random Forest,75.648,59.817,0.168,-15.83,Random Forest,59.817,0.0,True,0.429
-Easter Decorations,333,Linear Regression,25.258,73.627,0.231,48.37,7-Day Rolling Sum Baseline,23.631,50.0,False,0.571
-Egg Cups & Holders,333,7-Day Rolling Sum Baseline,34.464,84.842,-3.603,50.38,XGBoost,45.069,39.77,False,0.429
-Fairy Lights & Decorative Garlands,333,Linear Regression,33.313,23.43,0.594,-9.88,XGBoost,15.175,8.25,False,0.714
-"Furniture, Cabinets & Storage Furniture",333,Random Forest,13.814,15.463,-0.025,1.65,XGBoost,13.86,1.6,False,0.571
-"Garden, Bird Feeding & Outdoor Décor",333,Linear Regression,50.892,53.302,-0.396,2.41,XGBoost,42.818,10.48,False,0.769
-"Gift Wrap, Tape & Ribbons",333,Random Forest,28.279,22.618,0.509,-5.66,XGBoost,15.232,7.39,False,0.857
-"Glass Jars, Bottles & Vases",333,Random Forest,30.778,19.084,0.707,-11.69,Random Forest,19.084,0.0,True,0.571
-Hair Accessories,333,7-Day Rolling Sum Baseline,57.357,87.998,-1.518,30.64,Random Forest,51.256,36.74,False,0.571
-Hand Warmers & Umbrellas,333,XGBoost,29.702,39.763,0.314,10.06,Linear Regression,28.853,10.91,False,0.714
-Hot Water Bottles,333,XGBoost,29.149,56.223,0.265,27.07,7-Day Rolling Sum Baseline,23.629,32.59,False,0.857
-"Jewellery - Bracelets, Rings & Brooches",333,Random Forest,30.923,48.207,0.005,17.28,Linear Regression,36.66,11.55,False,0.571
-Jewellery - Earrings,333,XGBoost,62.002,111.763,-0.686,49.76,Linear Regression,91.006,20.76,False,0.857
-Jewellery - Necklaces,333,Random Forest,68.386,35.436,0.509,-32.95,Random Forest,35.436,0.0,True,0.714
-"Jigsaw Puzzles, Card Games & Board Games",333,Linear Regression,26.135,68.976,-1.833,42.84,XGBoost,28.984,39.99,False,0.615
-Jumbo Bags & Shoppers,333,7-Day Rolling Sum Baseline,33.961,68.139,-1.361,34.18,Random Forest,36.373,31.77,False,0.571
-Kitchen Storage & Containers,333,Linear Regression,38.653,25.133,-0.126,-13.52,Random Forest,22.451,2.68,False,0.462
-Kitchen Utensils & Tools,333,XGBoost,28.741,26.424,0.13,-2.32,Linear Regression,17.729,8.7,False,0.714
-Lamps & Lampshades,333,Random Forest,44.017,40.891,0.112,-3.13,Random Forest,40.891,0.0,True,0.615
-Lanterns,333,Random Forest,45.72,47.576,-0.369,1.86,XGBoost,44.514,3.06,False,0.571
-Lunch Boxes & Snack Bags,333,Linear Regression,31.573,23.542,0.228,-8.03,Random Forest,14.915,8.63,False,0.571
-Memo Boards & Blackboards,333,Random Forest,43.013,46.092,-0.055,3.08,7-Day Rolling Sum Baseline,45.198,0.89,False,0.571
-Metal Signs & Plaques,333,7-Day Rolling Sum Baseline,27.443,50.721,-0.409,23.28,Linear Regression,37.172,13.55,False,0.571
-Mirrors,333,XGBoost,41.857,70.899,-1.303,29.04,Linear Regression,37.004,33.9,False,0.429
-"Mugs, Cups & Glasses",333,XGBoost,23.624,22.719,-0.299,-0.9,Random Forest,21.621,1.1,False,0.857
-"Paper Napkins, Doilies & Bunting",333,Linear Regression,22.914,32.637,-1.636,9.72,Random Forest,26.12,6.52,False,0.714
-Party & Event Accessories,333,XGBoost,57.671,52.401,-1.832,-5.27,7-Day Rolling Sum Baseline,43.681,8.72,False,0.429
-Picture Frames & Photo Accessories,333,XGBoost,39.396,45.352,-0.619,5.96,7-Day Rolling Sum Baseline,43.869,1.48,False,0.571
-"Plates, Bowls, Trays & Serveware",333,7-Day Rolling Sum Baseline,27.272,88.274,-11.002,61.0,Random Forest,54.421,33.85,False,0.286
-Sewing & Craft Kits,333,XGBoost,56.812,30.423,-0.189,-26.39,7-Day Rolling Sum Baseline,24.685,5.74,False,0.857
-"Stationery, Notebooks & Greeting Cards",333,XGBoost,24.108,25.729,0.041,1.62,Random Forest,23.648,2.08,False,0.714
-"Stickers, Patches & Badges",333,Random Forest,67.037,46.376,-1.369,-20.66,7-Day Rolling Sum Baseline,41.466,4.91,False,0.769
-Tea & Coffee Sets,333,XGBoost,41.548,42.334,-1.719,0.79,Linear Regression,35.239,7.1,False,0.571
-Tealight Holders & Sets,333,Linear Regression,15.389,31.024,-0.178,15.64,Random Forest,22.657,8.37,False,0.571
-Travel & Office Accessories,333,XGBoost,21.758,33.414,-0.151,11.66,XGBoost,33.414,0.0,True,0.571
-Trinket Boxes & Keepsakes,333,Linear Regression,39.392,36.173,-2.106,-3.22,7-Day Rolling Sum Baseline,31.126,5.05,False,0.571
-Unclassified,333,Random Forest,47.048,53.707,-0.489,6.66,7-Day Rolling Sum Baseline,36.39,17.32,False,0.429
-Wall Art & Prints,333,7-Day Rolling Sum Baseline,35.832,80.976,-1.067,45.14,7-Day Rolling Sum Baseline,80.976,0.0,True,0.714
-Wooden Letters & Number Tiles,333,7-Day Rolling Sum Baseline,31.832,58.129,-7.219,26.3,Random Forest,34.088,24.04,False,0.857
+Category,selected_model,val_WAPE,test_WAPE,test_R2,best_on_test,best_test_WAPE,selection_loss,selection_correct
+"Bag Charms, Key Rings & Phone Charms",7-Day Rolling Sum Baseline,49.754,49.639,-0.27,Random Forest,37.289,12.35,False
+"Bags, Purses & Backpacks",7-Day Rolling Sum Baseline,23.424,22.072,-0.857,Linear Regression,16.679,5.39,False
+"Baskets, Hampers & Wicker",7-Day Rolling Sum Baseline,33.535,27.855,0.523,7-Day Rolling Sum Baseline,27.855,0.0,True
+Cake Cases & Baking Accessories,Random Forest,29.706,20.725,-0.281,Random Forest,20.725,0.0,True
+Cake Stands,XGBoost,31.847,23.533,-0.003,Random Forest,20.62,2.91,False
+"Candles, Incense & Matches",Random Forest,19.997,43.342,-1.674,Linear Regression,36.327,7.02,False
+Children's Toys & Playsets,XGBoost,26.278,15.645,0.637,XGBoost,15.645,0.0,True
+Christmas Decorations,Random Forest,18.296,21.562,0.905,Random Forest,21.562,0.0,True
+Clocks & Timepieces,XGBoost,31.109,36.056,-0.152,Linear Regression,21.614,14.44,False
+"Clothing, Accessories & Beauty",XGBoost,55.594,36.841,0.28,XGBoost,36.841,0.0,True
+"Coat Racks, Hooks & Hangers",Random Forest,30.424,24.189,0.03,Random Forest,24.189,0.0,True
+Colouring & Art Supplies,Random Forest,28.067,27.844,-0.066,Linear Regression,27.268,0.58,False
+"Cushions, Quilts & Home Textiles",Random Forest,33.561,33.531,0.195,Random Forest,33.531,0.0,True
+Cutlery & Chopping Boards,Random Forest,35.237,22.088,-0.163,XGBoost,17.898,4.19,False
+Decorative Hanging Ornaments & Figurines,Linear Regression,23.303,26.276,0.514,Random Forest,15.462,10.81,False
+Doormats & Doorstops,Random Forest,75.648,59.817,0.168,Random Forest,59.817,0.0,True
+Easter Decorations,Linear Regression,25.258,73.627,0.231,7-Day Rolling Sum Baseline,23.631,50.0,False
+Egg Cups & Holders,7-Day Rolling Sum Baseline,34.464,84.842,-3.603,XGBoost,45.069,39.77,False
+Fairy Lights & Decorative Garlands,Linear Regression,33.313,23.43,0.594,XGBoost,15.175,8.25,False
+"Furniture, Cabinets & Storage Furniture",Random Forest,13.814,15.463,-0.025,XGBoost,13.86,1.6,False
+"Garden, Bird Feeding & Outdoor Décor",Linear Regression,50.892,53.302,-0.396,XGBoost,42.818,10.48,False
+"Gift Wrap, Tape & Ribbons",Random Forest,28.279,22.618,0.509,XGBoost,15.232,7.39,False
+"Glass Jars, Bottles & Vases",Random Forest,30.778,19.084,0.707,Random Forest,19.084,0.0,True
+Hair Accessories,7-Day Rolling Sum Baseline,57.357,87.998,-1.518,Random Forest,51.256,36.74,False
+Hand Warmers & Umbrellas,XGBoost,29.702,39.763,0.314,Linear Regression,28.853,10.91,False
+Hot Water Bottles,XGBoost,29.149,56.223,0.265,7-Day Rolling Sum Baseline,23.629,32.59,False
+"Jewellery - Bracelets, Rings & Brooches",Random Forest,30.923,48.207,0.005,Linear Regression,36.66,11.55,False
+Jewellery - Earrings,XGBoost,62.002,111.763,-0.686,Linear Regression,91.006,20.76,False
+Jewellery - Necklaces,Random Forest,68.386,35.436,0.509,Random Forest,35.436,0.0,True
+"Jigsaw Puzzles, Card Games & Board Games",Linear Regression,26.135,68.976,-1.833,XGBoost,28.984,39.99,False
+Jumbo Bags & Shoppers,7-Day Rolling Sum Baseline,33.961,68.139,-1.361,Random Forest,36.373,31.77,False
+Kitchen Storage & Containers,Linear Regression,38.653,25.133,-0.126,Random Forest,22.451,2.68,False
+Kitchen Utensils & Tools,XGBoost,28.741,26.424,0.13,Linear Regression,17.729,8.7,False
+Lamps & Lampshades,Random Forest,44.017,40.891,0.112,Random Forest,40.891,0.0,True
+Lanterns,Random Forest,45.72,47.576,-0.369,XGBoost,44.514,3.06,False
+Lunch Boxes & Snack Bags,Linear Regression,31.573,23.542,0.228,Random Forest,14.915,8.63,False
+Memo Boards & Blackboards,Random Forest,43.013,46.092,-0.055,7-Day Rolling Sum Baseline,45.198,0.89,False
+Metal Signs & Plaques,7-Day Rolling Sum Baseline,27.443,50.721,-0.409,Linear Regression,37.172,13.55,False
+Mirrors,XGBoost,41.857,70.899,-1.303,Linear Regression,37.004,33.9,False
+"Mugs, Cups & Glasses",XGBoost,23.624,22.719,-0.299,Random Forest,21.621,1.1,False
+"Paper Napkins, Doilies & Bunting",Linear Regression,22.914,32.637,-1.636,Random Forest,26.12,6.52,False
+Party & Event Accessories,XGBoost,57.671,52.401,-1.832,7-Day Rolling Sum Baseline,43.681,8.72,False
+Picture Frames & Photo Accessories,XGBoost,39.396,45.352,-0.619,7-Day Rolling Sum Baseline,43.869,1.48,False
+"Plates, Bowls, Trays & Serveware",7-Day Rolling Sum Baseline,27.272,88.274,-11.002,Random Forest,54.421,33.85,False
+Sewing & Craft Kits,XGBoost,56.812,30.423,-0.189,7-Day Rolling Sum Baseline,24.685,5.74,False
+"Stationery, Notebooks & Greeting Cards",XGBoost,24.108,25.729,0.041,Random Forest,23.648,2.08,False
+"Stickers, Patches & Badges",Random Forest,67.037,46.376,-1.369,7-Day Rolling Sum Baseline,41.466,4.91,False
+Tea & Coffee Sets,XGBoost,41.548,42.334,-1.719,Linear Regression,35.239,7.1,False
+Tealight Holders & Sets,Linear Regression,15.389,31.024,-0.178,Random Forest,22.657,8.37,False
+Travel & Office Accessories,XGBoost,21.758,33.414,-0.151,XGBoost,33.414,0.0,True
+Trinket Boxes & Keepsakes,Linear Regression,39.392,36.173,-2.106,7-Day Rolling Sum Baseline,31.126,5.05,False
+Unclassified,Random Forest,47.048,53.707,-0.489,7-Day Rolling Sum Baseline,36.39,17.32,False
+Wall Art & Prints,7-Day Rolling Sum Baseline,35.832,80.976,-1.067,7-Day Rolling Sum Baseline,80.976,0.0,True
+Wooden Letters & Number Tiles,7-Day Rolling Sum Baseline,31.832,58.129,-7.219,Random Forest,34.088,24.04,False
