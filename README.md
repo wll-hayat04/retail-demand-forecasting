@@ -1,55 +1,52 @@
 # Retail Demand Forecasting
 
-Forecasting units sold per product category over the next **X** days, computed
-**Y** days in advance. UCI Online Retail dataset: 54 categories, 374 days
-(Dec 2010 – Dec 2011), ~230 usable training rows per category.
+Forecasting units sold per product category over the next **X** days, computed **Y** days in advance. The project uses the UCI Online Retail dataset: 54 categories, 374 days (December 2010–December 2011), and approximately 230 usable training rows per category in the reference experiment.
 
-The project began as a modelling exercise. Its main results turned out to be
-methodological.
+The project began as a modelling exercise and evolved into an investigation of **evaluation reliability, horizon choice, forecast errors, feature selection, and predictive uncertainty**.
 
 ---
 
-## Findings
+## Main findings
 
-**Per-category model selection is no better than chance.** Choosing the model
-with the lowest validation WAPE picks the actual test winner in **13 of 54
-categories (24%)**. Random choice among four models gives 25%.
+**Per-category model selection was unreliable in the reference experiment.** Selecting the model with the lowest validation WAPE identified the model with the lowest test WAPE in **13 of 54 categories (24%)**. For comparison, uniform random choice among four models has a 25% selection probability. This descriptive comparison does not establish that model selection performs at chance level in general.
 
-**A single fixed model beats selection.** Applying Random Forest to every
-category gives a mean test WAPE of **37.7** against **41.9** for per-category
-selection, with **10 catastrophic errors instead of 17** (>10 WAPE points off
-the best available model). Selection adds variance without adding information.
+**A fixed Random Forest performed better than validation-based selection in that experiment.** Applying Random Forest to every category yielded mean test WAPE of **37.7%**, compared with **41.9%** for per-category selection. It also produced **10**, rather than **17**, instances where the selected model's WAPE exceeded the lowest observed test WAPE by more than 10 percentage points. These figures describe the evaluated data and splits, not a guarantee about future performance.
 
-**WAPE was measuring the evaluation window, not forecast quality.** Across 30
-splits, WAPE correlated **−0.587** with the evaluation set's denominator while
-MAE correlated **+0.863** — the two metrics disagreed on identical
-predictions. Validation sets containing the Christmas peak have a large
-denominator and therefore a small WAPE almost regardless of accuracy.
+**WAPE is sensitive to the evaluation-set denominator.** Across 30 splits, WAPE correlated **−0.587** with the evaluation set's demand denominator, whereas MAE correlated **+0.863** with it. Changes in the amount and timing of demand included in an evaluation set can therefore affect WAPE rankings. WAPE should be interpreted alongside MAE and the amount of actual demand, especially across different forecast-window lengths.
 
-**Stratifying splits by demand cut the variance 5–12×.** Ordering 14-day
-blocks by mean demand before assigning them to train/validation/test reduced
-WAPE standard deviation from 42.8 to 8.8 on Christmas Decorations and from
-53.5 to 4.6 on Jewellery.
+**Demand-stratified splitting reduced measured variability, but did not eliminate leakage.** Ordering 14-day blocks by mean demand before assigning them to train, validation, and test reduced the standard deviation of WAPE from **42.8 to 8.8** for Christmas Decorations and from **53.5 to 4.6** for Jewellery – Earrings. Because the forecasting targets overlap in time, these splits are not equivalent to independent prospective evaluation.
 
-**An implausible R² exposed a data cleaning error.** One category returned a
-test R² of −2211. Tracing it back found two orders of 74,215 and 80,995 units,
-each cancelled within 30 minutes, whose cancellation rows had been dropped
-while the originals were kept. Matching cancellations to their originating
-orders brought that category from **440.5% to 15.6%** test WAPE.
+**An extreme R² helped identify a cleaning error.** One category initially had test R² of **−2211**. Investigation found two orders of **74,215** and **80,995** units, each cancelled within 30 minutes: cancellation rows had been dropped while the original purchases remained. Matching cancellations to their originating orders changed that category's measured test WAPE from **440.5% to 15.6%**.
 
-**TabFM wins on accuracy and loses on cost.** Google's zero-shot tabular
-foundation model wins **15 of 20 paired comparisons** across five categories,
-with no tuning or feature engineering. It is also **426× slower than Random
-Forest on CPU**, ships 6.6 GB of weights, and its pretrained weights are
-non-commercial only.
+**TabFM improved accuracy in the tested comparisons at substantial computational cost.** Google's zero-shot tabular foundation model had lower error in **15 of 20 paired comparisons** across five categories, without task-specific tuning. In this setup, it was **426× slower than Random Forest on CPU**, required approximately **6.6 GB** of weights, and its pretrained weights were restricted to non-commercial use.
 
-Overall: median test WAPE **36.5%**, positive test R² in **20 of 54**
-categories. Two thirds of categories are not forecast better than their own
-mean at a 7-day horizon with 7 days of lead time — a limit of one year of
-data, not of the models.
+**Performance remains category-dependent.** In the reference **X = 7, Y = 7** experiment, median test WAPE was **36.5%**, and test R² was positive in **20 of 54 categories**. For the remaining 34 categories, test R² was non-positive under this evaluation protocol. The dataset contains only one annual seasonal cycle, which limits the information available for learning rare seasonal events.
 
-Full write-up: [`RESULTS_REVISED.md`](RESULTS_REVISED.md) and
-[`RESULTS_54_AND_TABFM.md`](RESULTS_54_AND_TABFM.md).
+---
+
+## Further analyses
+
+### Forecasting windows and lead times
+
+The target at reference date *t* is the **total quantity sold from day t + Y through day t + Y + X − 1**. A joint analysis considered **X ∈ {7, 14, 28}** and **Y ∈ {1, 7, 14}** across five representative categories, using **10 repeated splits** per configuration and common reference dates within each category.
+
+Increasing the lead time often increased forecasting error at a fixed window length, but the pattern depended on the category and X. For example, at **X = 14**, Jewellery – Earrings validation WAPE increased from **60.89% (Y = 1)** to **130.49% (Y = 14)**, whereas Cake Cases & Baking Accessories remained comparatively stable across lead times at **X = 28** (**11.14–11.66%**).
+
+Longer windows often showed lower WAPE, partly because X increases the quantity accumulated in the WAPE denominator. **Different X values define different forecasting tasks**: a lower WAPE at X = 28 is not, on its own, evidence of a better forecast than at X = 7. The operational decision should determine X and Y before comparing models for that target.
+
+### Feature selection
+
+For Jewellery – Earrings and Christmas Decorations, an experiment compared **30 features** with the **top 15** and **top 10** ranked by mutual information **using training data only** in each of 10 repeated splits. The prediction target was held fixed at **X = 7, Y = 7**.
+
+With 10 features, mean validation WAPE changed from **75.23% to 73.61%** for Jewellery – Earrings and from **33.82% to 33.36%** for Christmas Decorations. However, across-split WAPE standard deviations increased from **6.60 to 11.81** and from **10.18 to 12.93**, respectively. A smaller feature set may simplify the model while maintaining comparable average accuracy, but **did not provide a consistent improvement in stability**. The 30-feature configuration remains the reference setup.
+
+### Error analysis and probabilistic forecasts
+
+Detailed error analysis of Jewellery – Earrings highlighted systematic underprediction during abrupt increases in future demand. Added short- versus long-term demand-regime features improved one test split, but **did not consistently improve performance across 30 paired splits**. An exploratory attempt to detect future demand jumps from the features available at prediction time was also unstable; the observed jump rows represented only a small number of distinct episodes because target windows overlap.
+
+Probabilistic forecasting estimates **conditional quantiles of the same future cumulative-demand target**, not quantiles of historical sales or residuals. At **X = 7, Y = 7**, the Q10 and Q90 predictions define a nominal **80% prediction interval**. For Jewellery – Earrings, raw empirical test coverage was **26.19%**; validation-based conformal adjustment increased it to **52.38%**, still below the nominal target. None of the seven high-demand test observations fell inside the calibrated intervals.
+
+Across the five categories, calibration increased empirical coverage, but results varied substantially. Some categories attained high coverage with wide intervals, while abrupt demand spikes remained poorly covered in others. **An interval is useful only when its observed coverage and width are reported together.** The conformal results are exploratory: temporal dependence, overlapping target windows, and the evaluation protocol limit the applicability of standard exchangeability-based coverage guarantees.
 
 ---
 
@@ -62,15 +59,15 @@ pip install -e . --no-deps
 pip install -r requirements.txt
 ```
 
-Place `Online Retail.xlsx` and `products_to_categories.json` in `data/raw/`,
-then:
+Place `Online Retail.xlsx` and `products_to_categories.json` in `data/raw/`, then:
 
 ```python
 from src.data import build_daily_dataset
-build_daily_dataset()          # writes data/processed/daily_category_sales_clean.csv
+
+build_daily_dataset()  # writes data/processed/daily_category_sales_clean.csv
 ```
 
-Single category, all models:
+Run all registered models for one category:
 
 ```python
 import pandas as pd
@@ -83,72 +80,71 @@ res = pipe.run_pipeline(daily, "Tealight Holders & Sets", X=7, Y=7)
 res["results"]
 ```
 
-With uncertainty, which is the point:
+Evaluate model differences over repeated splits:
 
 ```python
 from src import validation as val
 
-rep = val.repeated_evaluation(daily, "Tealight Holders & Sets",
-                              seeds=range(30), stratified=True)
+rep = val.repeated_evaluation(
+    daily,
+    "Tealight Holders & Sets",
+    seeds=range(30),
+    stratified=True,
+)
 val.summarise_repeats(rep)
-val.is_difference_meaningful(rep, "Random Forest", "7-Day Rolling Sum Baseline")
+val.is_difference_meaningful(
+    rep,
+    "Random Forest",
+    "7-Day Rolling Sum Baseline",
+)
 ```
 
-`is_difference_meaningful` compares two models on the *same* splits. If the
-confidence interval crosses zero, the models are indistinguishable on this
-dataset and no claim should be made either way.
+`is_difference_meaningful` compares models on the **same splits**. If the reported confidence interval for their difference includes zero, this experiment does not establish a clear difference at the specified confidence level; it does not prove that their performance is identical.
 
 ---
 
-## Structure
+## Project structure
 
-```
+```text
 src/
-  config.py      paths, holidays, feature list, split parameters
-  data.py        Excel -> cleaned daily sales (incl. cancellation matching)
-  features.py    target, lags, rolling stats, calendar, holiday features
-  splits.py      block-shuffled and stratified block splits, leakage measure
-  metrics.py     MAE, RMSE, WAPE, R2, bias
-  models.py      model registry; TabFM registered on demand
-  pipeline.py    feature selection, training loop, horizon search
-  validation.py  repeated evaluation, paired comparison with CIs
+  config.py       paths, holidays, feature list, split parameters
+  data.py         Excel → cleaned daily sales, including cancellation matching
+  features.py     targets, lags, rolling statistics, calendar and holiday features
+  splits.py       block-shuffled and stratified block splits, leakage measure
+  metrics.py      MAE, RMSE, WAPE, R², bias
+  models.py       model registry; TabFM registered on demand
+  pipeline.py     feature selection, training loop, horizon search
+  validation.py   repeated evaluation, paired comparisons with confidence intervals
 
 notebooks/
   01_data_preparation.ipynb   cleaning and aggregation
-  02_modeling.ipynb           single-category analysis
-  03_split_strategy.ipynb     comparison of four split strategies
-  04_tabfm.ipynb              TabFM evaluation
-  pipeline.ipynb              reusable pipeline demonstration
+  02_modeling.ipynb           model comparison, X/Y horizon analysis,
+                            error diagnostics, probabilistic forecasting,
+                            and feature selection
+  03_split_strategy.ipynb    comparison of four split strategies
+  04_tabfm.ipynb             TabFM evaluation
+  pipeline.ipynb             reusable pipeline demonstration
+  RESULTS_54_AND_TABFM.md    category-level and TabFM results
 
-results/                      all CSVs backing the numbers above
+results/                       CSV files backing the reported results
 ```
 
-Adding a model is one function plus a decorator in `src/models.py`; every
-notebook that imports the registry picks it up.
+The model registry in `src/models.py` allows a new model to be added using one function and a decorator.
+
+For additional results, see [`RESULTS_REVISED.md`](RESULTS_REVISED.md) and [`RESULTS_54_AND_TABFM.md`](notebooks/RESULTS_54_AND_TABFM.md).
 
 ---
 
-## Method notes
+## Methodological notes and limitations
 
-**Splitting.** Four strategies were compared (random, chronological,
-TimeSeriesCV, block-shuffled). Block-shuffled was selected as the only one
-giving positive R² on most categories, with ~50% residual leakage documented
-and measured. Stratified block splitting is the improvement described above.
+**Splitting and leakage.** Random, chronological, time-series cross-validation, and block-shuffled splitting were explored. Block-shuffled and demand-stratified block splits made the observed evaluation results more stable, but target windows can overlap across train, validation, and test. `splits.leakage_ratio` measures this overlap. Stable results under these splits must **not** be interpreted as unbiased prospective forecast performance.
 
-**Leakage.** Two rows share leakage when their target windows overlap, i.e.
-when they are fewer than X days apart. `splits.leakage_ratio` measures this
-rather than asserting it.
+**Metrics and horizons.** WAPE normalizes absolute error by actual demand and is useful for comparing categories under an appropriate shared evaluation protocol. Its denominator changes with the evaluation sample and with X. Compare models using paired splits and the same (X, Y) target; report MAE, WAPE, and demand scale together.
 
-**Metrics.** WAPE is scale-independent and comparable across categories, which
-is why it was chosen — but it is not comparable across different values of X,
-since the denominator grows with the window. Conclusions rest on paired
-comparisons over repeated splits, not on absolute WAPE levels.
+**Limited history and rare events.** Approximately one year of data contains only one Christmas season and few distinct abrupt-demand episodes. Neither added model complexity nor a split strategy can recover predictive information that is absent from the historical and calendar features. External information available at prediction time, such as planned promotions, prices, and stock availability, could be investigated in future work.
 
-**Limitation.** One year of data contains exactly one Christmas. No split
-strategy or model creates seasonal signal that is not there, and this is the
-binding constraint on every result.
+**Scope of the conclusions.** The detailed X/Y, feature-selection, error, and probabilistic experiments concern selected categories and use exploratory validation protocols. Their conclusions should not be generalized automatically to all 54 categories or to future independent time periods.
 
 ---
 
-*Internship project, Miningful — Hayat Waldi, EMI (Université Mohammed V de
-Rabat), June–August 2026. Supervisor: Nevio Dubbini.*
+*Internship project, Miningful — Hayat Waldi, EMI (Université Mohammed V de Rabat), June–August 2026. Supervisor: Nevio Dubbini.*
