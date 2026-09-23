@@ -29,15 +29,43 @@ def register(name: str):
 
 
 # ---------------------------------------------------------------------------
-# Baseline
+# Baselines
 # ---------------------------------------------------------------------------
+
+def horizon_scaled_baseline(df: pd.DataFrame, X: int, history_window: int = 7,) -> np.ndarray:
+    """Forecast cumulative demand over X days.
+    Extrapolates the average daily demand observed over the previous
+    `history_window` days to the future forecasting window X.
+
+    The rolling sum must contain only observations available at the
+    forecast reference date.
+    """
+    if X < 1:
+        raise ValueError("X must be a positive integer.")
+
+    if history_window < 1:
+        raise ValueError("history_window must be a positive integer.")
+
+    column = f"rolling_sum_{history_window}"
+
+    if column not in df.columns:
+        raise KeyError(
+            f"Required baseline feature '{column}' is missing."
+        )
+
+    return (
+        df[column].to_numpy(dtype=float)
+        * X
+        / history_window
+    )
+
 
 @register("7-Day Rolling Sum Baseline")
 def _baseline(train, val, test, features, target):
-    """Predict the next X days as the sum of the previous 7.
+    """Historical baseline for the reference configuration X=7.
 
-    Uses no features and requires no fitting — the reference every model
-    has to beat to justify its complexity.
+    Preserved for compatibility with the original experiments.
+    This baseline must not be used to compare different X values.
     """
     return (
         train["rolling_sum_7"].to_numpy(),
@@ -45,6 +73,34 @@ def _baseline(train, val, test, features, target):
         test["rolling_sum_7"].to_numpy(),
     )
 
+
+@register("Horizon-Scaled 7-Day Baseline")
+def _horizon_scaled_baseline(
+    train, val, test, features, target
+):
+    """Baseline adjusted to the forecasting window X.
+
+    The target name must follow the convention target_X{X}_Y{Y}.
+    """
+    import re
+
+    match = re.fullmatch(
+        r"target_X(\d+)_Y(\d+)",
+        target,
+    )
+
+    if match is None:
+        raise ValueError(
+            f"Cannot extract X and Y from target name: {target}"
+        )
+
+    X = int(match.group(1))
+
+    return (
+        horizon_scaled_baseline(train, X),
+        horizon_scaled_baseline(val, X),
+        horizon_scaled_baseline(test, X),
+    )
 
 # ---------------------------------------------------------------------------
 # Classical models

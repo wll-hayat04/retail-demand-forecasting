@@ -155,3 +155,83 @@ def build_daily_dataset(raw_path=None, out_path=None, verbose=True):
     if verbose:
         print(f"written to {out_path}")
     return daily
+
+def cancellation_matching_diagnostic(df: pd.DataFrame) -> pd.DataFrame:
+    """Count candidate original sales for each cancellation.
+
+    Candidates have the same customer and stock code, the opposite
+    quantity, and an invoice date no later than the cancellation date.
+
+    Diagnostic only: does not modify the input or assign matches.
+    """
+    import bisect
+
+    required = {
+        "InvoiceNo", "CustomerID", "StockCode",
+        "Quantity", "InvoiceDate",
+    }
+    missing = required.difference(df.columns)
+    if missing:
+        raise KeyError(f"Missing required columns: {sorted(missing)}")
+
+    is_cancel = df["InvoiceNo"].astype(str).str.startswith("C")
+    cancellations = df.loc[is_cancel]
+    originals = df.loc[~is_cancel]
+
+    # Index original sales once, grouping by matching characteristics.
+    index = defaultdict(list)
+
+    for customer, stock, quantity, date in zip(
+        originals["CustomerID"],
+        originals["StockCode"].astype(str),
+        originals["Quantity"],
+        pd.to_datetime(originals["InvoiceDate"]),
+    ):
+        if pd.isna(customer) or pd.isna(date):
+            continue
+
+        index[(customer, stock, quantity)].append(date)
+
+    for dates in index.values():
+        dates.sort()
+
+    rows = []
+
+    for idx, customer, stock, quantity, date, invoice in zip(
+        cancellations.index,
+        cancellations["CustomerID"],
+        cancellations["StockCode"].astype(str),
+        cancellations["Quantity"],
+        pd.to_datetime(cancellations["InvoiceDate"]),
+        cancellations["InvoiceNo"],
+    ):
+        if pd.isna(customer) or pd.isna(date):
+            n_candidates = 0
+        else:
+            candidates = index.get(
+                (customer, stock, -quantity), []
+            )
+
+            # Number of original sales dated at or before cancellation.
+            n_candidates = bisect.bisect_right(candidates, date)
+
+        rows.append({
+            "cancellation_row": idx,
+            "invoice": invoice,
+            "number_of_candidates": n_candidates,
+            "matching_status": (
+                "unmatched" if n_candidates == 0
+                else "unique_candidate" if n_candidates == 1
+                else "multiple_candidates"
+            ),
+        })
+
+    return pd.DataFrame(
+        rows,
+        columns=[
+            "cancellation_row",
+            "invoice",
+            "number_of_candidates",
+            "matching_status",
+        ],
+    )

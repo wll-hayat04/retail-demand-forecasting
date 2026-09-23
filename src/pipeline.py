@@ -75,10 +75,15 @@ def optimize_horizons(daily, category, X_range=range(1, 29),
         s = spl.block_shuffled_split(data)
         target = config.target_name(X, Y)
         from .metrics import evaluate_forecast
-        return evaluate_forecast(
-            s["validation"][target], s["validation"]["rolling_sum_7"]
-        )["wape"]
+        val_pred = mdl.horizon_scaled_baseline(
+            s["validation"],
+            X=X,
+        )
 
+        return evaluate_forecast(
+            s["validation"][target],
+            val_pred,
+        )["wape"]
     x_scores = {X: _val_wape(X, Y_fixed) for X in X_range}
     best_X = min((k for k, v in x_scores.items() if not np.isnan(v)),
                  key=lambda k: x_scores[k], default=config.DEFAULT_X)
@@ -93,9 +98,7 @@ def optimize_horizons(daily, category, X_range=range(1, 29),
         {"Y": list(y_scores), "val_wape": list(y_scores.values())}
     )
 
-
-def run_pipeline(daily, category, X=config.DEFAULT_X, Y=config.DEFAULT_Y,
-                 n_features=None, verbose=True, stratified=True) -> dict | None:
+def run_pipeline(daily, category, X=config.DEFAULT_X, Y=config.DEFAULT_Y, n_features=None, verbose=True, stratified=True, split_strategy=None, ) -> dict | None:
     """Full run for one category at fixed X and Y."""
     if verbose:
         print(f"\n{'=' * 60}\n{category}  (X={X}, Y={Y})")
@@ -108,14 +111,53 @@ def run_pipeline(daily, category, X=config.DEFAULT_X, Y=config.DEFAULT_Y,
 
     target = config.target_name(X, Y)
     features = feat.available_features(data)
-    splits = (spl.stratified_block_split(data, target)
-              if stratified else spl.block_shuffled_split(data))
+    # Preserve the historical behavior when split_strategy is omitted.
+    if split_strategy is None:
+        split_strategy=("stratified_block" if stratified else "block_shuffled")
+    if split_strategy == "stratified_block":
+        splits = spl.stratified_block_split(data, target)
+    elif split_strategy == "block_shuffled":
+        splits = spl.block_shuffled_split(data)
+    elif split_strategy == "purged_chronological":
+        splits = spl.purged_chronological_split(data, X=X, Y=Y,)
+    else:
+        raise ValueError(
+            f"Unknown split_strategy: {split_strategy!r}. "
+            "Expected 'stratified_block', 'block_shuffled', "
+            "or 'purged_chronological'."
+        )
 
     if n_features is not None:
         features = select_features(splits["train"], features, target,
                                    n_features)
 
-    results, predictions = train_all_models(splits, features, target)
+    # Select the baseline appropriate for the forecasting window.
+    #
+    # X=7: retain the historical baseline used in the reference
+    # experiments, avoiding two identical baseline predictions.
+    #
+    # X!=7: use the horizon-scaled baseline and exclude the
+    # historical 7-day baseline from model comparison.
+
+    if X == 7:
+        model_names = [
+            name
+            for name in mdl.model_names()
+            if name != "Horizon-Scaled 7-Day Baseline"
+        ]
+    else:
+        model_names = [
+            name
+            for name in mdl.model_names()
+            if name != "7-Day Rolling Sum Baseline"
+        ]
+
+    results, predictions = train_all_models(
+        splits,
+        features,
+        target,
+        only=model_names,
+    )
     results.insert(0, "Category", category)
     results["X"] = X
     results["Y"] = Y
@@ -138,4 +180,6 @@ def run_pipeline(daily, category, X=config.DEFAULT_X, Y=config.DEFAULT_Y,
         "predictions": predictions,
         "best_model": best["Model"],
         "leakage_ratio": spl.leakage_ratio(splits, X),
+        "split_strategy": split_strategy,
+        "split_overlap_report": spl.split_overlap_report(splits, X),
     }
