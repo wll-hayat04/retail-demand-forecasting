@@ -18,7 +18,32 @@ The project began as a modelling exercise and evolved into an investigation of *
 
 **An extreme R² helped identify a cleaning error.** One category initially had test R² of **−2211**. Investigation found two orders of **74,215** and **80,995** units, each cancelled within 30 minutes: cancellation rows had been dropped while the original purchases remained. Matching cancellations to their originating orders changed that category's measured test WAPE from **440.5% to 15.6%**.
 
-**TabFM improved accuracy in the tested comparisons at substantial computational cost.** Google's zero-shot tabular foundation model had lower error in **15 of 20 paired comparisons** across five categories, without task-specific tuning. In this setup, it was **426× slower than Random Forest on CPU**, required approximately **6.6 GB** of weights, and its pretrained weights were restricted to non-commercial use.
+**TabFM: predictive performance and computational constraints.**
+TabFM, Google's zero-shot tabular foundation model, achieved lower
+forecasting error in 15 of 20 paired comparisons across five categories,
+without task-specific tuning.
+
+Initial experiments were conducted locally on an Intel i5-1135G7 CPU.
+A TabFM call required approximately 536.7 seconds, compared with
+0.87 seconds for Random Forest under the measured configuration.
+The full local evaluation could not be completed because loading the
+approximately 6.6 GB model weights exhausted the available Windows
+virtual memory.
+
+The full TabFM evaluation was therefore performed on Kaggle using
+an NVIDIA Tesla T4 GPU. GPU execution reduced the time per call to
+approximately 10.5 seconds, around 51 times faster than the local
+CPU measurement.
+
+The GPU experiments covered five product categories and 30 repeated
+splits, using 32 estimators. Their results were saved in
+`results/tabfm_comparison_raw.csv`,
+`results/tabfm_verdicts.csv`, and
+`results/tabfm_comparison_summary.csv`.
+
+These findings illustrate the trade-off between predictive accuracy,
+computational cost, and hardware requirements. The pretrained weights
+used in this project are also subject to non-commercial-use restrictions.
 
 **Performance remains category-dependent.** In the reference **X = 7, Y = 7** experiment, median test WAPE was **36.5%**, and test R² was positive in **20 of 54 categories**. For the remaining 34 categories, test R² was non-positive under this evaluation protocol. The dataset contains only one annual seasonal cycle, which limits the information available for learning rare seasonal events.
 
