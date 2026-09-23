@@ -48,6 +48,39 @@ Probabilistic forecasting estimates **conditional quantiles of the same future c
 
 Across the five categories, calibration increased empirical coverage, but results varied substantially. Some categories attained high coverage with wide intervals, while abrupt demand spikes remained poorly covered in others. **An interval is useful only when its observed coverage and width are reported together.** The conformal results are exploratory: temporal dependence, overlapping target windows, and the evaluation protocol limit the applicability of standard exchangeability-based coverage guarantees.
 
+### Comparison of prediction interval strategies
+
+Three approaches were compared for estimating uncertainty around future
+cumulative demand:
+
+- Absolute fixed margins around the point forecast.
+- Percentage-based fixed margins around the point forecast.
+- Conformally calibrated Q10–Q90 prediction intervals.
+
+For the fixed-margin approaches, interval sizes were selected on validation
+data to target at least 80% empirical coverage, then evaluated unchanged
+on the test set.
+
+The experiments revealed a category-dependent trade-off between interval
+coverage and width.
+
+For Christmas Decorations, both the percentage-based and conformal
+intervals achieved 97.62% test coverage. However, their mean interval
+widths represented 162.16% and 68.87% of mean observed test demand,
+respectively.
+
+The percentage-based interval used a ±75% margin around each point forecast.
+The value 162.16% represents the resulting mean interval width relative
+to mean observed demand, not the percentage margin applied to the forecast.
+
+For Jewellery - Earrings, none of the tested approaches achieved 80%
+test coverage, and none covered the high-demand observations.
+
+These findings demonstrate that prediction intervals should be evaluated
+jointly in terms of empirical coverage, interval width, and their ability
+to represent high-demand events. No single approach performed uniformly
+across all five categories.
+
 ---
 
 ## Reproducing
