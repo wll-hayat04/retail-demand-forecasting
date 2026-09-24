@@ -110,22 +110,59 @@ across all five categories.
 
 ## Reproducing
 
+### Classical forecasting environment
+
+The classical forecasting pipeline has been validated with Python 3.11.
+From the repository root, create a virtual environment and install the
+project dependencies:
+
 ```bash
 git clone https://github.com/wll-hayat04/retail-demand-forecasting.git
 cd retail-demand-forecasting
-pip install -e . --no-deps
-pip install -r requirements.txt
+
+python -m venv .venv
 ```
 
-Place `Online Retail.xlsx` and `products_to_categories.json` in `data/raw/`, then:
+Activate the environment on Windows PowerShell:
+
+```powershell
+.\.venv\Scripts\Activate.ps1
+```
+
+Then install the dependencies and run the tests:
+
+```bash
+python -m pip install -r requirements.txt
+python -m pytest tests -q
+```
+
+`requirements-lock.txt` records the dependency versions of the validated
+Windows/Python 3.11 environment. It is an environment snapshot rather than
+a guarantee of identical installations across operating systems.
+
+### Data preparation
+
+The raw UCI Online Retail workbook and the product-to-category mapping
+are not included in the repository. Place `Online Retail.xlsx` and
+`products_to_categories.json` in `data/raw/`, then run:
 
 ```python
 from src.data import build_daily_dataset
 
-build_daily_dataset()  # writes data/processed/daily_category_sales_clean.csv
+build_daily_dataset()
 ```
 
-Run all registered models for one category:
+This generates `data/processed/daily_category_sales_clean.csv`.
+
+Cancellation matching uses a heuristic based on customer, product,
+opposite quantity, transaction date, and the availability of an unmatched
+original purchase. The matching decisions can be inspected in
+`results/cancellation_matching_audit.csv` and reproduced with
+`scripts/audit_cancellations.py`. The matching procedure does not establish
+that every cancellation can be linked unambiguously to its originating
+purchase.
+
+### Running the forecasting pipeline
 
 ```python
 import pandas as pd
@@ -134,11 +171,29 @@ from src import config, pipeline as pipe
 daily = pd.read_csv(config.DAILY_CLEAN, parse_dates=["Date"])
 daily = daily[~daily["Category"].isin(config.EXCLUDED_CATEGORIES)]
 
-res = pipe.run_pipeline(daily, "Tealight Holders & Sets", X=7, Y=7)
-res["results"]
+res = pipe.run_pipeline(
+    daily,
+    "Tealight Holders & Sets",
+    X=7,
+    Y=7,
+    split_strategy="purged_chronological",
+)
+
+print(res["results"])
+print(res["split_overlap_report"])
 ```
 
-Evaluate model differences over repeated splits:
+`purged_chronological` orders observations by reference date and removes
+boundary observations whose target labels would not be fully observable
+before the next partition begins. The reported overlap diagnostics concern
+the target windows; zero target-window overlap does not eliminate all
+temporal dependence or distribution shift.
+
+For the historical exploratory block-shuffled and demand-stratified
+experiments, use the corresponding split strategy explicitly. These
+protocols must not be confused with purged chronological evaluation.
+
+### Repeated model comparisons
 
 ```python
 from src import validation as val
@@ -149,15 +204,41 @@ rep = val.repeated_evaluation(
     seeds=range(30),
     stratified=True,
 )
-val.summarise_repeats(rep)
-val.is_difference_meaningful(
+
+summary = val.summarise_repeats(rep)
+
+comparison = val.is_difference_meaningful(
     rep,
     "Random Forest",
     "7-Day Rolling Sum Baseline",
 )
 ```
 
-`is_difference_meaningful` compares models on the **same splits**. If the reported confidence interval for their difference includes zero, this experiment does not establish a clear difference at the specified confidence level; it does not prove that their performance is identical.
+This reproduces an exploratory demand-stratified comparison rather than a
+prospective evaluation. Model differences are computed on paired splits.
+A confidence interval that contains zero does not establish a clear
+difference at the specified confidence level; it does not prove that
+the models have identical performance.
+
+### TabFM environment and results
+
+TabFM is optional and is not installed by the classical environment
+requirements. Its experiments require a separate compatible PyTorch/TabFM
+environment and access to the pretrained regression checkpoint.
+
+The final five-category TabFM comparison was conducted separately on a
+Tesla T4 GPU, using 30 paired demand-stratified splits and
+`n_estimators=32`. Its saved results are available in:
+
+- `results/tabfm_comparison_raw.csv`
+- `results/tabfm_comparison_summary.csv`
+- `results/tabfm_verdicts.csv`
+
+`notebooks/04_tabfm.ipynb` contains exploratory local CPU experiments.
+Its previously saved execution outputs were cleared because they came
+from different runtime configurations. Running this notebook may require
+substantial memory and computation time. Reproducing the classical
+pipeline does not require running TabFM.
 
 ---
 
@@ -165,43 +246,87 @@ val.is_difference_meaningful(
 
 ```text
 src/
-  config.py       paths, holidays, feature list, split parameters
-  data.py         Excel → cleaned daily sales, including cancellation matching
-  features.py     targets, lags, rolling statistics, calendar and holiday features
-  splits.py       block-shuffled and stratified block splits, leakage measure
-  metrics.py      MAE, RMSE, WAPE, R², bias
-  models.py       model registry; TabFM registered on demand
-  pipeline.py     feature selection, training loop, horizon search
-  validation.py   repeated evaluation, paired comparisons with confidence intervals
+  config.py       paths, holidays, features, and experiment parameters
+  data.py         transaction cleaning, cancellation matching, daily aggregation
+  features.py     future-demand targets and past-only predictive features
+  splits.py       block-shuffled, stratified, and purged chronological splits;
+                  target-window overlap diagnostics
+  metrics.py      forecasting error metrics
+  models.py       baseline and machine-learning model registry; optional TabFM
+  pipeline.py     model evaluation, feature selection, and horizon analysis
+  validation.py   repeated evaluations and paired model comparisons
 
 notebooks/
-  01_data_preparation.ipynb   cleaning and aggregation
-  02_modeling.ipynb           model comparison, X/Y horizon analysis,
-                            error diagnostics, probabilistic forecasting,
-                            and feature selection
-  03_split_strategy.ipynb    comparison of four split strategies
-  04_tabfm.ipynb             TabFM evaluation
-  pipeline.ipynb             reusable pipeline demonstration
+  01_data_preparation.ipynb   data preparation and diagnostics
+  02_modeling.ipynb           model and forecasting-horizon experiments
+  03_split_strategy.ipynb    historical split-strategy experiments
+  04_tabfm.ipynb             exploratory local TabFM experiments
+  pipeline.ipynb             pipeline demonstration
   RESULTS_54_AND_TABFM.md    category-level and TabFM results
 
-results/                       CSV files backing the reported results
+scripts/
+  audit_cancellations.py      cancellation-matching audit
+
+tests/
+  test_cancellations.py       cancellation-matching tests
+  test_features.py            feature and target-construction tests
+  test_temporal_validation.py temporal validation and baseline tests
+
+results/                       saved experimental results and audit CSV
+requirements.txt               classical environment and development dependencies
+requirements-lock.txt          validated environment dependency snapshot
 ```
 
-The model registry in `src/models.py` allows a new model to be added using one function and a decorator.
-
-For additional results, see [`RESULTS_REVISED.md`](RESULTS_REVISED.md) and [`RESULTS_54_AND_TABFM.md`](notebooks/RESULTS_54_AND_TABFM.md).
+For additional experimental results, see
+[`RESULTS_REVISED.md`](RESULTS_REVISED.md) and
+[`RESULTS_54_AND_TABFM.md`](notebooks/RESULTS_54_AND_TABFM.md).
 
 ---
 
 ## Methodological notes and limitations
 
-**Splitting and leakage.** Random, chronological, time-series cross-validation, and block-shuffled splitting were explored. Block-shuffled and demand-stratified block splits made the observed evaluation results more stable, but target windows can overlap across train, validation, and test. `splits.leakage_ratio` measures this overlap. Stable results under these splits must **not** be interpreted as unbiased prospective forecast performance.
+**Splitting and leakage.** Random, chronological, time-series,
+block-shuffled, and demand-stratified splitting strategies were explored.
+Block-shuffled splits can retain overlapping future-demand target windows
+across partitions. Demand-stratified splitting additionally uses observed
+target demand to construct the partitions, making it unsuitable as a
+prospective validation protocol. The newly implemented purged chronological
+split removes observations around partition boundaries until earlier
+target labels would be fully observable before the following partition
+begins. Historical results obtained with block-shuffled and
+demand-stratified splits remain exploratory and have not been retroactively
+replaced by purged chronological results.
 
-**Metrics and horizons.** WAPE normalizes absolute error by actual demand and is useful for comparing categories under an appropriate shared evaluation protocol. Its denominator changes with the evaluation sample and with X. Compare models using paired splits and the same (X, Y) target; report MAE, WAPE, and demand scale together.
+**Metrics and horizons.** WAPE normalizes absolute error by observed
+demand. Its denominator changes with the evaluation sample and with
+the forecast-window length X. Model comparisons should use the same
+target definition and paired evaluation samples, with MAE, WAPE, and
+actual-demand scale reported together. The seven-day rolling-sum baseline
+is the historical reference for X = 7; a horizon-scaled baseline is
+available for other forecast-window lengths.
 
-**Limited history and rare events.** Approximately one year of data contains only one Christmas season and few distinct abrupt-demand episodes. Neither added model complexity nor a split strategy can recover predictive information that is absent from the historical and calendar features. External information available at prediction time, such as planned promotions, prices, and stock availability, could be investigated in future work.
+**Cancellation matching.** Matching cancellations to purchases is
+heuristic. Some cancellation rows have no eligible original purchase,
+while others have multiple possible matches. The audit records these
+cases, but does not independently verify the underlying transaction
+relationships. The two exceptional high-quantity cancellations were
+matched to unique available candidates under the implemented matching
+rule.
 
-**Scope of the conclusions.** The detailed X/Y, feature-selection, error, and probabilistic experiments concern selected categories and use exploratory validation protocols. Their conclusions should not be generalized automatically to all 54 categories or to future independent time periods.
+**Limited history and rare events.** Approximately one year of retail
+data contains only one Christmas season and relatively few independent
+episodes of abrupt demand. Neither increased model complexity nor
+a different splitting strategy can recover information absent from
+the available predictors. Future work could investigate additional
+years of data and operational variables known at forecasting time,
+such as planned promotions, prices, and stock availability.
+
+**Scope of the conclusions.** The detailed horizon, feature-selection,
+error-analysis, probabilistic-forecasting, and TabFM experiments concern
+selected categories. Most historical comparisons used exploratory
+evaluation protocols. Their observed performance should not be
+generalized automatically to all categories or to independent future
+periods.
 
 ---
 
