@@ -18,7 +18,7 @@ The project began as a modelling exercise and evolved into an investigation of *
 
 **An extreme R² helped identify a cleaning error.** One category initially had test R² of **−2211**. Investigation found two orders of **74,215** and **80,995** units, each cancelled within 30 minutes: cancellation rows had been dropped while the original purchases remained. Matching cancellations to their originating orders changed that category's measured test WAPE from **440.5% to 15.6%**.
 
-**TabFM improved accuracy in the tested comparisons at substantial computational cost.** Google's zero-shot tabular foundation model had lower error in **15 of 20 paired comparisons** across five categories, without task-specific tuning. In this setup, it was **426× slower than Random Forest on CPU**, required approximately **6.6 GB** of weights, and its pretrained weights were restricted to non-commercial use.
+**TabFM improved accuracy in the tested comparisons at substantial computational cost.** Google's zero-shot tabular foundation model had lower error in **15 of 20 paired comparisons** across five categories, without task-specific tuning. In one local CPU benchmark on an Intel i5-1135G7, a TabFM fit-and-predict call took **536.7 s**, compared with **1.26 s** for Random Forest (about **426× slower**). On a Tesla T4 GPU, a TabFM fit-and-predict call took about **10.5 s**, roughly **51× faster than the local CPU benchmark**. Runtime depends strongly on hardware and model configuration. The regression weights require approximately **6.6 GB**, and the pretrained weights are distributed under a non-commercial licence.
 
 **Performance remains category-dependent.** In the reference **X = 7, Y = 7** experiment, median test WAPE was **36.5%**, and test R² was positive in **20 of 54 categories**. For the remaining 34 categories, test R² was non-positive under this evaluation protocol. The dataset contains only one annual seasonal cycle, which limits the information available for learning rare seasonal events.
 
@@ -76,9 +76,11 @@ from src import config, pipeline as pipe
 daily = pd.read_csv(config.DAILY_CLEAN, parse_dates=["Date"])
 daily = daily[~daily["Category"].isin(config.EXCLUDED_CATEGORIES)]
 
-res = pipe.run_pipeline(daily, "Tealight Holders & Sets", X=7, Y=7)
+res = pipe.run_pipeline(daily, "Tealight Holders & Sets", X=7, Y=7, split_strategy="purged_chronological")
 res["results"]
 ```
+
+For prospective-oriented evaluation, use `split_strategy="purged_chronological"` in the pipeline call above. This strategy orders observations chronologically and purges boundary rows to prevent target-window overlap between partitions. The demand-stratified repeated evaluation below is exploratory, not a prospective performance estimate.
 
 Evaluate model differences over repeated splits:
 
@@ -137,7 +139,7 @@ For additional results, see [`RESULTS_REVISED.md`](RESULTS_REVISED.md) and [`RES
 
 ## Methodological notes and limitations
 
-**Splitting and leakage.** Random, chronological, time-series cross-validation, and block-shuffled splitting were explored. Block-shuffled and demand-stratified block splits made the observed evaluation results more stable, but target windows can overlap across train, validation, and test. `splits.leakage_ratio` measures this overlap. Stable results under these splits must **not** be interpreted as unbiased prospective forecast performance.
+**Splitting and leakage.** Random, chronological, time-series, block-shuffled, and demand-stratified splitting strategies were explored. Block-shuffled splits can retain overlapping future-demand target windows across partitions. Demand-stratified splitting additionally uses observed target demand to construct the partitions, so it is not a prospective validation protocol. The pipeline now also supports a purged chronological split (`split_strategy="purged_chronological"`), which removes boundary observations until target labels in an earlier partition would be fully observable before the following partition begins. `split_overlap_report` checks target-window overlap between partitions. Historical results obtained with block-shuffled and demand-stratified splits remain exploratory and have not been retroactively replaced by purged chronological results.
 
 **Metrics and horizons.** WAPE normalizes absolute error by actual demand and is useful for comparing categories under an appropriate shared evaluation protocol. Its denominator changes with the evaluation sample and with X. Compare models using paired splits and the same (X, Y) target; report MAE, WAPE, and demand scale together.
 
