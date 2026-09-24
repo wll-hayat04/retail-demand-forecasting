@@ -285,17 +285,8 @@ For additional experimental results, see
 
 ## Methodological notes and limitations
 
-**Splitting and leakage.** Random, chronological, time-series,
-block-shuffled, and demand-stratified splitting strategies were explored.
-Block-shuffled splits can retain overlapping future-demand target windows
-across partitions. Demand-stratified splitting additionally uses observed
-target demand to construct the partitions, making it unsuitable as a
-prospective validation protocol. The newly implemented purged chronological
-split removes observations around partition boundaries until earlier
-target labels would be fully observable before the following partition
-begins. Historical results obtained with block-shuffled and
-demand-stratified splits remain exploratory and have not been retroactively
-replaced by purged chronological results.
+**Splitting and leakage.** Random, chronological, time-series, block-shuffled, and demand-stratified splitting strategies were explored. Block-shuffled splits can retain overlapping future-demand target windows across partitions. Demand-stratified splitting additionally uses observed target demand to construct the partitions, so it is not a prospective validation protocol. The pipeline now also supports a purged chronological split (`split_strategy="purged_chronological"`), which removes boundary observations until target labels in an earlier partition would be fully observable before the following partition begins. `split_overlap_report` checks target-window overlap between partitions. Historical results obtained with block-shuffled and demand-stratified splits remain exploratory and have not been retroactively replaced by purged chronological results.
+
 
 **Metrics and horizons.** WAPE normalizes absolute error by observed
 demand. Its denominator changes with the evaluation sample and with
