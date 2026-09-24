@@ -1,8 +1,2 @@
-﻿pandas
-numpy
-scikit-learn>=1.6
-xgboost
-matplotlib
-seaborn
-openpyxl
-statsmodels
+﻿# Install the project's declared dependencies and notebook/test tools.
+-e ".[notebooks,test]"
