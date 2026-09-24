@@ -1,0 +1,217 @@
+Category,Model,Train WAPE (%),Train R2,Validation WAPE (%),Validation R2,Test WAPE (%),Test R2,Test MAE,Test RMSE,Test Bias,X,Y,split_strategy,selected_on_validation
+"Bag Charms, Key Rings & Phone Charms",7-Day Rolling Sum Baseline,97.662,-1.12,57.32,-1.561,56.446,-1.247,101.216,123.016,-9.569,7,7,purged_chronological,False
+"Bag Charms, Key Rings & Phone Charms",Linear Regression,76.787,0.328,68.208,-2.191,105.586,-8.849,189.329,257.539,87.407,7,7,purged_chronological,False
+"Bag Charms, Key Rings & Phone Charms",Random Forest,13.523,0.951,44.893,-0.737,137.174,-28.525,245.972,445.893,160.099,7,7,purged_chronological,False
+"Bag Charms, Key Rings & Phone Charms",XGBoost,1.23,1.0,38.896,-0.284,125.734,-34.187,225.458,486.773,100.329,7,7,purged_chronological,True
+"Bags, Purses & Backpacks",7-Day Rolling Sum Baseline,34.392,-1.258,18.185,-1.18,15.201,-1.181,921.059,1060.434,-192.588,7,7,purged_chronological,False
+"Bags, Purses & Backpacks",Linear Regression,17.674,0.451,16.981,-0.629,15.782,-1.43,956.29,1119.275,-933.347,7,7,purged_chronological,True
+"Bags, Purses & Backpacks",Random Forest,4.366,0.957,20.132,-1.136,30.072,-6.577,1822.145,1976.492,-1822.145,7,7,purged_chronological,False
+"Bags, Purses & Backpacks",XGBoost,0.166,1.0,20.065,-1.223,29.148,-6.404,1766.16,1953.849,-1752.524,7,7,purged_chronological,False
+"Baskets, Hampers & Wicker",7-Day Rolling Sum Baseline,52.585,-0.581,30.544,-1.298,23.713,-0.491,239.157,308.155,-56.529,7,7,purged_chronological,True
+"Baskets, Hampers & Wicker",Linear Regression,39.998,0.197,73.947,-8.904,45.471,-2.941,458.603,501.103,-458.603,7,7,purged_chronological,False
+"Baskets, Hampers & Wicker",Random Forest,6.849,0.97,63.275,-6.27,65.052,-6.798,656.092,704.84,-656.092,7,7,purged_chronological,False
+"Baskets, Hampers & Wicker",XGBoost,0.614,1.0,69.431,-7.55,67.452,-7.382,680.299,730.752,-680.299,7,7,purged_chronological,False
+Cake Cases & Baking Accessories,7-Day Rolling Sum Baseline,46.945,-1.394,66.456,-2.557,13.045,-0.93,848.922,1022.125,-55.0,7,7,purged_chronological,False
+Cake Cases & Baking Accessories,Linear Regression,24.783,0.301,34.049,-0.286,15.911,-1.937,1035.406,1260.706,-731.789,7,7,purged_chronological,False
+Cake Cases & Baking Accessories,Random Forest,6.242,0.947,33.216,-0.415,14.128,-1.446,919.379,1150.435,-663.862,7,7,purged_chronological,True
+Cake Cases & Baking Accessories,XGBoost,0.301,1.0,37.558,-0.599,16.772,-2.257,1091.453,1327.656,-709.456,7,7,purged_chronological,False
+Cake Stands,7-Day Rolling Sum Baseline,45.505,-1.513,50.155,-2.378,32.386,-0.076,141.882,220.335,-61.725,7,7,purged_chronological,False
+Cake Stands,Linear Regression,21.039,0.43,35.535,-0.699,38.313,-0.473,167.848,257.802,-55.704,7,7,purged_chronological,True
+Cake Stands,Random Forest,4.874,0.966,54.71,-2.983,39.201,-0.471,171.739,257.592,2.259,7,7,purged_chronological,False
+Cake Stands,XGBoost,0.283,1.0,59.516,-4.226,51.929,-0.965,227.501,297.745,59.515,7,7,purged_chronological,False
+"Candles, Incense & Matches",7-Day Rolling Sum Baseline,40.167,-1.879,30.577,-1.312,30.434,-2.698,1321.686,1628.0,-150.588,7,7,purged_chronological,True
+"Candles, Incense & Matches",Linear Regression,19.638,0.413,47.271,-4.022,94.394,-22.912,4099.394,4139.641,-4099.394,7,7,purged_chronological,False
+"Candles, Incense & Matches",Random Forest,5.196,0.949,35.865,-2.396,46.733,-6.053,2029.558,2248.198,-2029.558,7,7,purged_chronological,False
+"Candles, Incense & Matches",XGBoost,0.188,1.0,38.573,-2.794,50.219,-6.983,2180.926,2391.862,-2180.926,7,7,purged_chronological,False
+Children's Toys & Playsets,7-Day Rolling Sum Baseline,45.315,-1.669,36.573,-1.081,39.156,-3.323,778.961,905.294,222.02,7,7,purged_chronological,False
+Children's Toys & Playsets,Linear Regression,24.657,0.245,30.976,-0.331,34.992,-2.734,696.128,841.403,-688.318,7,7,purged_chronological,True
+Children's Toys & Playsets,Random Forest,5.022,0.963,33.935,-0.991,47.025,-4.331,935.494,1005.363,-935.494,7,7,purged_chronological,False
+Children's Toys & Playsets,XGBoost,0.21,1.0,35.558,-1.229,53.666,-6.02,1067.614,1153.594,-1067.614,7,7,purged_chronological,False
+Christmas Decorations,7-Day Rolling Sum Baseline,47.047,0.532,46.644,-0.295,21.085,-1.635,2867.843,3429.05,-374.471,7,7,purged_chronological,True
+Christmas Decorations,Linear Regression,32.736,0.793,47.58,-0.314,26.402,-3.906,3591.019,4679.022,1870.634,7,7,purged_chronological,False
+Christmas Decorations,Random Forest,7.652,0.98,75.18,-2.565,86.995,-31.381,11832.524,12020.974,-11832.524,7,7,purged_chronological,False
+Christmas Decorations,XGBoost,0.261,1.0,74.305,-2.514,88.123,-32.21,11985.915,12173.908,-11985.915,7,7,purged_chronological,False
+Clocks & Timepieces,7-Day Rolling Sum Baseline,49.092,-0.72,44.414,-4.941,58.504,-2.207,686.255,795.65,-111.314,7,7,purged_chronological,False
+Clocks & Timepieces,Linear Regression,34.243,0.317,29.366,-0.806,44.042,-0.97,516.616,623.599,52.129,7,7,purged_chronological,False
+Clocks & Timepieces,Random Forest,6.871,0.955,26.061,-0.744,42.385,-1.343,497.174,680.077,-422.359,7,7,purged_chronological,False
+Clocks & Timepieces,XGBoost,0.333,1.0,22.254,-0.427,44.402,-1.518,520.84,704.997,-371.903,7,7,purged_chronological,True
+"Clothing, Accessories & Beauty",7-Day Rolling Sum Baseline,62.161,-0.857,35.927,-1.205,35.743,-1.784,485.647,613.395,97.569,7,7,purged_chronological,True
+"Clothing, Accessories & Beauty",Linear Regression,36.851,0.416,72.607,-4.718,40.408,-2.755,549.029,712.4,471.305,7,7,purged_chronological,False
+"Clothing, Accessories & Beauty",Random Forest,7.992,0.964,62.675,-6.105,41.022,-2.504,557.376,688.12,460.781,7,7,purged_chronological,False
+"Clothing, Accessories & Beauty",XGBoost,0.561,1.0,57.505,-5.847,39.719,-2.064,539.676,643.524,397.745,7,7,purged_chronological,False
+"Coat Racks, Hooks & Hangers",7-Day Rolling Sum Baseline,45.666,-1.458,20.893,-0.165,35.832,-2.42,442.745,631.819,-83.569,7,7,purged_chronological,True
+"Coat Racks, Hooks & Hangers",Linear Regression,23.228,0.309,24.651,-0.517,26.456,-0.626,326.888,435.721,-265.913,7,7,purged_chronological,False
+"Coat Racks, Hooks & Hangers",Random Forest,5.385,0.955,27.524,-1.064,27.455,-1.001,339.232,483.246,-276.653,7,7,purged_chronological,False
+"Coat Racks, Hooks & Hangers",XGBoost,0.118,1.0,30.579,-1.682,30.163,-1.212,372.692,508.1,-259.276,7,7,purged_chronological,False
+Colouring & Art Supplies,7-Day Rolling Sum Baseline,44.199,-0.709,26.826,-1.335,28.157,-1.529,2292.529,2870.996,-104.137,7,7,purged_chronological,False
+Colouring & Art Supplies,Linear Regression,23.106,0.479,21.307,-0.148,27.002,-1.607,2198.453,2914.662,-1865.128,7,7,purged_chronological,True
+Colouring & Art Supplies,Random Forest,4.493,0.977,30.489,-1.514,48.486,-4.839,3947.682,4362.191,-3947.682,7,7,purged_chronological,False
+Colouring & Art Supplies,XGBoost,0.141,1.0,28.33,-1.191,46.618,-4.718,3795.621,4316.932,-3795.621,7,7,purged_chronological,False
+"Cushions, Quilts & Home Textiles",7-Day Rolling Sum Baseline,55.959,-1.645,25.993,-0.419,43.172,-4.334,342.961,434.517,152.412,7,7,purged_chronological,True
+"Cushions, Quilts & Home Textiles",Linear Regression,27.364,0.449,55.595,-5.987,63.769,-7.497,506.585,548.424,-506.585,7,7,purged_chronological,False
+"Cushions, Quilts & Home Textiles",Random Forest,7.566,0.944,62.481,-5.649,33.517,-2.014,266.261,326.634,-248.347,7,7,purged_chronological,False
+"Cushions, Quilts & Home Textiles",XGBoost,0.841,0.999,66.72,-6.311,48.919,-4.589,388.621,444.784,-383.36,7,7,purged_chronological,False
+Cutlery & Chopping Boards,7-Day Rolling Sum Baseline,56.757,-1.736,57.353,-0.655,26.195,-0.969,272.216,328.314,-52.255,7,7,purged_chronological,False
+Cutlery & Chopping Boards,Linear Regression,25.426,0.464,51.676,-0.008,42.667,-4.017,443.385,523.998,-443.385,7,7,purged_chronological,False
+Cutlery & Chopping Boards,Random Forest,6.387,0.963,47.414,-0.227,30.268,-1.906,314.537,398.793,-311.153,7,7,purged_chronological,True
+Cutlery & Chopping Boards,XGBoost,0.342,1.0,47.803,-0.316,32.466,-2.191,337.376,417.923,-332.808,7,7,purged_chronological,False
+Decorative Hanging Ornaments & Figurines,7-Day Rolling Sum Baseline,44.813,-1.272,32.82,-0.411,21.212,-1.237,1800.216,2149.715,-151.941,7,7,purged_chronological,False
+Decorative Hanging Ornaments & Figurines,Linear Regression,25.403,0.324,41.474,-1.686,55.197,-10.931,4684.385,4964.537,-4684.385,7,7,purged_chronological,False
+Decorative Hanging Ornaments & Figurines,Random Forest,4.187,0.968,30.741,-0.373,45.096,-7.126,3827.187,4097.124,-3827.187,7,7,purged_chronological,True
+Decorative Hanging Ornaments & Figurines,XGBoost,0.325,1.0,33.504,-0.644,51.116,-9.215,4338.078,4593.542,-4338.078,7,7,purged_chronological,False
+Doormats & Doorstops,7-Day Rolling Sum Baseline,103.129,-1.304,117.9,-1.272,40.912,-0.558,352.137,439.214,4.137,7,7,purged_chronological,False
+Doormats & Doorstops,Linear Regression,66.172,0.396,85.262,-0.508,87.542,-6.649,753.496,973.226,433.67,7,7,purged_chronological,False
+Doormats & Doorstops,Random Forest,12.539,0.951,81.462,-0.395,112.918,-11.363,971.916,1237.264,399.101,7,7,purged_chronological,False
+Doormats & Doorstops,XGBoost,0.676,1.0,80.698,-0.38,109.223,-12.367,940.106,1286.529,344.933,7,7,purged_chronological,True
+Easter Decorations,7-Day Rolling Sum Baseline,47.322,0.473,53.51,-0.795,137.43,-1.448,337.216,521.467,8.039,7,7,purged_chronological,True
+Easter Decorations,Linear Regression,27.617,0.853,71.664,-1.18,438.001,-14.673,1074.734,1319.603,757.691,7,7,purged_chronological,False
+Easter Decorations,Random Forest,3.903,0.996,190.819,-15.098,310.074,-6.43,760.837,908.561,476.943,7,7,purged_chronological,False
+Easter Decorations,XGBoost,0.297,1.0,218.909,-18.942,298.643,-5.811,732.789,869.916,434.574,7,7,purged_chronological,False
+Egg Cups & Holders,7-Day Rolling Sum Baseline,55.406,-0.263,53.103,-3.897,54.507,-1.729,102.569,129.858,9.0,7,7,purged_chronological,False
+Egg Cups & Holders,Linear Regression,36.17,0.562,47.15,-2.357,70.94,-3.146,133.492,160.057,45.656,7,7,purged_chronological,True
+Egg Cups & Holders,Random Forest,6.591,0.978,89.312,-8.937,50.962,-0.959,95.899,110.012,33.628,7,7,purged_chronological,False
+Egg Cups & Holders,XGBoost,0.27,1.0,105.085,-11.754,63.319,-1.957,119.152,135.162,-0.218,7,7,purged_chronological,False
+Fairy Lights & Decorative Garlands,7-Day Rolling Sum Baseline,41.965,-0.789,34.742,-0.913,29.274,-0.566,1180.275,1389.19,-543.725,7,7,purged_chronological,False
+Fairy Lights & Decorative Garlands,Linear Regression,17.917,0.656,30.268,-0.638,27.965,-0.529,1127.491,1372.614,69.078,7,7,purged_chronological,True
+Fairy Lights & Decorative Garlands,Random Forest,4.649,0.976,38.673,-1.598,55.804,-4.081,2249.937,2501.964,-2249.937,7,7,purged_chronological,False
+Fairy Lights & Decorative Garlands,XGBoost,0.4,1.0,41.175,-1.901,58.58,-4.495,2361.884,2601.935,-2361.884,7,7,purged_chronological,False
+"Furniture, Cabinets & Storage Furniture",7-Day Rolling Sum Baseline,37.389,-1.611,32.672,-2.763,19.847,-1.587,438.353,578.695,-27.725,7,7,purged_chronological,False
+"Furniture, Cabinets & Storage Furniture",Linear Regression,17.572,0.375,29.131,-1.754,12.392,-0.076,273.7,373.268,-167.997,7,7,purged_chronological,True
+"Furniture, Cabinets & Storage Furniture",Random Forest,4.374,0.955,32.112,-2.104,17.705,-0.672,391.041,465.264,-287.853,7,7,purged_chronological,False
+"Furniture, Cabinets & Storage Furniture",XGBoost,0.268,1.0,33.319,-2.304,22.641,-1.787,500.057,600.606,-442.216,7,7,purged_chronological,False
+"Garden, Bird Feeding & Outdoor Décor",7-Day Rolling Sum Baseline,57.571,-0.72,49.164,-1.096,39.183,-0.449,231.471,326.298,-113.353,7,7,purged_chronological,True
+"Garden, Bird Feeding & Outdoor Décor",Linear Regression,30.898,0.493,59.355,-2.325,54.208,-1.29,320.23,410.248,-290.418,7,7,purged_chronological,False
+"Garden, Bird Feeding & Outdoor Décor",Random Forest,6.796,0.969,71.709,-3.584,38.975,-0.261,230.241,304.462,66.685,7,7,purged_chronological,False
+"Garden, Bird Feeding & Outdoor Décor",XGBoost,0.389,1.0,68.866,-3.399,39.63,-0.317,234.11,311.153,39.484,7,7,purged_chronological,False
+"Gift Wrap, Tape & Ribbons",7-Day Rolling Sum Baseline,43.135,-1.856,37.076,-0.289,21.948,-3.611,1651.314,2242.006,799.039,7,7,purged_chronological,False
+"Gift Wrap, Tape & Ribbons",Linear Regression,19.078,0.435,38.911,-0.8,38.311,-7.895,2882.448,3114.062,-2881.935,7,7,purged_chronological,False
+"Gift Wrap, Tape & Ribbons",Random Forest,4.248,0.968,36.33,-0.45,46.088,-11.038,3467.596,3622.719,-3467.596,7,7,purged_chronological,False
+"Gift Wrap, Tape & Ribbons",XGBoost,0.511,1.0,35.004,-0.362,46.738,-11.394,3516.539,3675.886,-3516.539,7,7,purged_chronological,True
+"Glass Jars, Bottles & Vases",7-Day Rolling Sum Baseline,61.435,-0.891,46.395,-0.598,30.807,-2.573,200.686,225.569,15.392,7,7,purged_chronological,False
+"Glass Jars, Bottles & Vases",Linear Regression,33.205,0.389,21.467,0.557,24.982,-1.602,162.738,192.496,38.638,7,7,purged_chronological,True
+"Glass Jars, Bottles & Vases",Random Forest,7.537,0.96,48.107,-1.123,20.656,-0.822,134.558,161.085,-116.076,7,7,purged_chronological,False
+"Glass Jars, Bottles & Vases",XGBoost,0.29,1.0,50.563,-1.372,24.172,-1.305,157.461,181.173,-145.864,7,7,purged_chronological,False
+Hair Accessories,7-Day Rolling Sum Baseline,69.695,-0.963,85.539,-2.247,52.422,-0.077,50.078,118.543,-41.804,7,7,purged_chronological,False
+Hair Accessories,Linear Regression,44.904,0.284,52.553,-0.318,78.756,-0.476,75.235,138.741,-75.235,7,7,purged_chronological,False
+Hair Accessories,Random Forest,9.768,0.951,52.327,-0.305,71.923,-0.388,68.708,134.583,-68.708,7,7,purged_chronological,True
+Hair Accessories,XGBoost,0.898,1.0,59.249,-0.626,70.545,-0.367,67.391,133.535,-67.391,7,7,purged_chronological,False
+Hand Warmers & Umbrellas,7-Day Rolling Sum Baseline,49.6,-0.731,49.277,-0.904,34.394,-1.556,1172.882,1459.106,-259.824,7,7,purged_chronological,True
+Hand Warmers & Umbrellas,Linear Regression,31.224,0.389,69.726,-2.554,78.527,-8.358,2677.882,2791.766,-2677.882,7,7,purged_chronological,False
+Hand Warmers & Umbrellas,Random Forest,6.129,0.969,52.936,-1.314,60.077,-5.022,2048.705,2239.531,-2048.705,7,7,purged_chronological,False
+Hand Warmers & Umbrellas,XGBoost,0.24,1.0,50.539,-1.144,58.199,-4.76,1984.675,2190.288,-1984.675,7,7,purged_chronological,False
+Hot Water Bottles,7-Day Rolling Sum Baseline,61.982,-0.265,50.577,-1.214,31.198,-0.635,980.49,1239.473,-457.902,7,7,purged_chronological,True
+Hot Water Bottles,Linear Regression,30.832,0.815,66.445,-2.78,72.298,-5.351,2272.194,2443.186,-2272.194,7,7,purged_chronological,False
+Hot Water Bottles,Random Forest,5.542,0.991,80.884,-4.157,83.406,-7.272,2621.301,2788.179,-2621.301,7,7,purged_chronological,False
+Hot Water Bottles,XGBoost,0.517,1.0,71.565,-3.165,70.24,-5.187,2207.534,2411.36,-2207.534,7,7,purged_chronological,False
+"Jewellery - Bracelets, Rings & Brooches",7-Day Rolling Sum Baseline,40.471,-0.141,72.604,-1.859,29.907,-1.373,546.196,709.524,-62.745,7,7,purged_chronological,False
+"Jewellery - Bracelets, Rings & Brooches",Linear Regression,22.98,0.625,51.428,-0.397,24.599,-0.662,449.254,593.832,-391.516,7,7,purged_chronological,False
+"Jewellery - Bracelets, Rings & Brooches",Random Forest,4.837,0.978,40.048,-0.12,57.795,-5.24,1055.515,1150.642,-1055.515,7,7,purged_chronological,True
+"Jewellery - Bracelets, Rings & Brooches",XGBoost,0.269,1.0,40.159,-0.11,55.395,-4.789,1011.689,1108.308,-1011.689,7,7,purged_chronological,False
+Jewellery - Earrings,7-Day Rolling Sum Baseline,124.785,-0.976,94.822,-2.37,114.83,-1.845,130.118,159.613,-1.176,7,7,purged_chronological,False
+Jewellery - Earrings,Linear Regression,74.624,0.352,55.083,-0.153,96.384,-1.282,109.216,142.948,-92.499,7,7,purged_chronological,True
+Jewellery - Earrings,Random Forest,13.835,0.956,58.388,-0.563,78.17,-0.9,88.577,130.429,-85.6,7,7,purged_chronological,False
+Jewellery - Earrings,XGBoost,1.647,1.0,64.255,-1.015,82.246,-0.979,93.196,133.128,-90.545,7,7,purged_chronological,False
+Jewellery - Necklaces,7-Day Rolling Sum Baseline,103.116,-1.427,109.841,-0.657,38.109,-1.821,15.02,21.015,-4.627,7,7,purged_chronological,False
+Jewellery - Necklaces,Linear Regression,55.108,0.262,84.836,-0.09,85.035,-9.122,33.514,39.809,-11.73,7,7,purged_chronological,True
+Jewellery - Necklaces,Random Forest,13.282,0.944,90.563,-0.333,59.662,-3.464,23.514,26.435,-23.514,7,7,purged_chronological,False
+Jewellery - Necklaces,XGBoost,0.943,1.0,92.012,-0.413,65.085,-4.093,25.651,28.237,-25.651,7,7,purged_chronological,False
+"Jigsaw Puzzles, Card Games & Board Games",7-Day Rolling Sum Baseline,58.09,-0.959,32.702,-0.326,31.513,-1.869,2108.039,2679.471,-14.118,7,7,purged_chronological,True
+"Jigsaw Puzzles, Card Games & Board Games",Linear Regression,37.699,0.28,48.907,-1.394,36.178,-2.331,2420.106,2886.82,-1693.909,7,7,purged_chronological,False
+"Jigsaw Puzzles, Card Games & Board Games",Random Forest,7.734,0.951,42.278,-1.29,59.864,-6.282,4004.58,4268.421,-4004.58,7,7,purged_chronological,False
+"Jigsaw Puzzles, Card Games & Board Games",XGBoost,0.737,1.0,43.785,-1.419,57.535,-5.837,3848.769,4135.885,-3848.769,7,7,purged_chronological,False
+Jumbo Bags & Shoppers,7-Day Rolling Sum Baseline,44.199,-0.523,42.863,-2.588,55.546,-2.071,4151.49,4906.457,-63.216,7,7,purged_chronological,False
+Jumbo Bags & Shoppers,Linear Regression,25.662,0.477,24.434,-0.094,37.819,-0.42,2826.582,3337.071,-609.086,7,7,purged_chronological,True
+Jumbo Bags & Shoppers,Random Forest,6.08,0.964,29.381,-1.029,39.265,-1.07,2934.642,4028.428,-2834.963,7,7,purged_chronological,False
+Jumbo Bags & Shoppers,XGBoost,0.209,1.0,26.846,-0.599,37.405,-1.006,2795.609,3965.689,-2614.623,7,7,purged_chronological,False
+Kitchen Storage & Containers,7-Day Rolling Sum Baseline,52.491,-1.035,27.221,-2.062,24.57,-2.337,881.196,1101.357,230.255,7,7,purged_chronological,False
+Kitchen Storage & Containers,Linear Regression,30.611,0.315,23.348,-1.485,21.646,-1.077,776.345,868.771,-171.798,7,7,purged_chronological,True
+Kitchen Storage & Containers,Random Forest,7.875,0.937,29.061,-1.564,27.624,-2.966,990.729,1200.649,-984.796,7,7,purged_chronological,False
+Kitchen Storage & Containers,XGBoost,0.598,1.0,31.733,-1.966,37.434,-5.111,1342.572,1490.366,-1342.572,7,7,purged_chronological,False
+Kitchen Utensils & Tools,7-Day Rolling Sum Baseline,36.153,-0.29,30.382,-1.493,30.259,-0.621,386.882,440.179,-121.784,7,7,purged_chronological,False
+Kitchen Utensils & Tools,Linear Regression,20.382,0.623,13.218,0.417,32.839,-0.993,419.864,488.01,-354.236,7,7,purged_chronological,True
+Kitchen Utensils & Tools,Random Forest,4.979,0.974,18.478,-0.049,35.909,-1.493,459.118,545.869,-440.45,7,7,purged_chronological,False
+Kitchen Utensils & Tools,XGBoost,0.252,1.0,22.574,-0.453,38.654,-1.695,494.219,567.546,-488.805,7,7,purged_chronological,False
+Lamps & Lampshades,7-Day Rolling Sum Baseline,74.672,-0.902,67.175,-2.136,53.998,-1.735,97.588,122.474,1.549,7,7,purged_chronological,False
+Lamps & Lampshades,Linear Regression,50.817,0.143,49.315,-1.017,76.137,-3.314,137.599,153.829,-137.599,7,7,purged_chronological,False
+Lamps & Lampshades,Random Forest,12.977,0.929,47.6,-1.085,70.097,-2.734,126.684,143.112,-126.684,7,7,purged_chronological,True
+Lamps & Lampshades,XGBoost,0.734,1.0,48.358,-1.387,70.915,-2.738,128.162,143.191,-128.162,7,7,purged_chronological,False
+Lanterns,7-Day Rolling Sum Baseline,71.474,-2.043,78.851,-2.032,47.217,-1.084,265.843,336.42,-34.118,7,7,purged_chronological,False
+Lanterns,Linear Regression,39.528,0.311,38.332,0.076,33.788,-0.423,190.232,278.043,-140.873,7,7,purged_chronological,True
+Lanterns,Random Forest,7.342,0.963,43.188,-0.383,73.174,-4.141,411.981,528.433,328.663,7,7,purged_chronological,False
+Lanterns,XGBoost,0.959,1.0,40.33,-0.181,43.859,-0.873,246.937,318.983,-223.062,7,7,purged_chronological,False
+Lunch Boxes & Snack Bags,7-Day Rolling Sum Baseline,42.225,-0.426,21.756,-1.179,27.234,-0.687,1941.0,2414.49,-781.98,7,7,purged_chronological,True
+Lunch Boxes & Snack Bags,Linear Regression,25.732,0.458,37.477,-4.627,22.572,-0.013,1608.75,1871.478,677.57,7,7,purged_chronological,False
+Lunch Boxes & Snack Bags,Random Forest,5.741,0.969,27.656,-2.86,27.505,-0.439,1960.344,2230.267,-1039.51,7,7,purged_chronological,False
+Lunch Boxes & Snack Bags,XGBoost,0.293,1.0,31.214,-4.169,30.515,-0.757,2174.864,2464.089,-984.702,7,7,purged_chronological,False
+Memo Boards & Blackboards,7-Day Rolling Sum Baseline,69.704,-1.678,51.961,-0.813,32.67,-0.353,148.745,251.589,-55.529,7,7,purged_chronological,False
+Memo Boards & Blackboards,Linear Regression,36.807,0.391,51.79,-0.778,41.261,-0.285,187.857,245.199,31.977,7,7,purged_chronological,False
+Memo Boards & Blackboards,Random Forest,8.243,0.948,50.515,-0.87,40.857,-0.559,186.019,270.101,-176.521,7,7,purged_chronological,False
+Memo Boards & Blackboards,XGBoost,0.413,1.0,50.248,-0.881,45.439,-0.742,206.883,285.508,-199.707,7,7,purged_chronological,True
+Metal Signs & Plaques,7-Day Rolling Sum Baseline,43.337,-1.204,43.22,-0.637,37.523,-0.63,1372.451,1918.413,-750.333,7,7,purged_chronological,False
+Metal Signs & Plaques,Linear Regression,19.499,0.526,46.109,-0.714,38.352,-0.832,1402.775,2033.64,-1149.864,7,7,purged_chronological,False
+Metal Signs & Plaques,Random Forest,4.835,0.964,38.298,-0.464,28.895,0.042,1056.892,1470.503,-348.313,7,7,purged_chronological,True
+Metal Signs & Plaques,XGBoost,0.192,1.0,39.993,-0.708,26.626,0.071,973.874,1448.277,-403.739,7,7,purged_chronological,False
+Mirrors,7-Day Rolling Sum Baseline,72.291,-0.683,54.098,-1.923,36.039,-0.075,138.667,181.623,-81.922,7,7,purged_chronological,False
+Mirrors,Linear Regression,40.901,0.505,107.782,-8.887,72.611,-2.396,279.383,322.778,92.312,7,7,purged_chronological,False
+Mirrors,Random Forest,9.967,0.955,58.753,-1.696,39.479,-0.413,151.9,208.204,-10.421,7,7,purged_chronological,False
+Mirrors,XGBoost,0.36,1.0,52.481,-1.298,51.835,-0.878,199.444,240.016,0.993,7,7,purged_chronological,True
+"Mugs, Cups & Glasses",7-Day Rolling Sum Baseline,36.634,-1.443,67.195,-1.035,43.687,-1.253,2100.784,2667.413,-75.294,7,7,purged_chronological,False
+"Mugs, Cups & Glasses",Linear Regression,18.874,0.335,44.168,-0.302,36.596,-0.533,1759.816,2200.453,-1542.955,7,7,purged_chronological,False
+"Mugs, Cups & Glasses",Random Forest,4.312,0.957,40.743,0.093,30.605,-0.247,1471.719,1984.537,-201.224,7,7,purged_chronological,True
+"Mugs, Cups & Glasses",XGBoost,0.134,1.0,45.108,0.052,30.453,-0.084,1464.421,1849.772,-55.099,7,7,purged_chronological,False
+"Paper Napkins, Doilies & Bunting",7-Day Rolling Sum Baseline,35.291,-1.375,32.695,-2.023,33.479,-1.682,1181.392,1411.621,-52.922,7,7,purged_chronological,False
+"Paper Napkins, Doilies & Bunting",Linear Regression,16.01,0.503,26.074,-0.861,28.695,-1.105,1012.598,1250.404,-724.254,7,7,purged_chronological,False
+"Paper Napkins, Doilies & Bunting",Random Forest,4.133,0.961,24.005,-0.38,26.011,-0.789,917.871,1152.839,-809.778,7,7,purged_chronological,True
+"Paper Napkins, Doilies & Bunting",XGBoost,0.191,1.0,24.333,-0.408,25.978,-0.768,916.715,1146.041,-804.302,7,7,purged_chronological,False
+Party & Event Accessories,7-Day Rolling Sum Baseline,61.538,-0.945,47.594,-2.04,52.164,-1.628,299.961,401.204,-42.196,7,7,purged_chronological,True
+Party & Event Accessories,Linear Regression,34.462,0.339,70.951,-4.876,58.908,-1.366,338.746,380.703,222.497,7,7,purged_chronological,False
+Party & Event Accessories,Random Forest,8.552,0.945,82.989,-6.876,69.885,-2.499,401.867,462.935,328.434,7,7,purged_chronological,False
+Party & Event Accessories,XGBoost,0.552,1.0,59.618,-3.927,64.425,-2.219,370.469,444.047,181.681,7,7,purged_chronological,False
+Picture Frames & Photo Accessories,7-Day Rolling Sum Baseline,50.282,-1.43,38.575,-0.696,42.399,-2.249,846.745,1063.088,-247.725,7,7,purged_chronological,False
+Picture Frames & Photo Accessories,Linear Regression,25.964,0.304,37.886,-0.718,77.649,-7.033,1550.705,1671.474,-1550.705,7,7,purged_chronological,True
+Picture Frames & Photo Accessories,Random Forest,5.679,0.961,43.366,-0.969,61.025,-4.28,1218.717,1355.075,-1218.717,7,7,purged_chronological,False
+Picture Frames & Photo Accessories,XGBoost,0.307,1.0,43.683,-0.998,60.772,-4.255,1213.672,1351.928,-1213.672,7,7,purged_chronological,False
+"Plates, Bowls, Trays & Serveware",7-Day Rolling Sum Baseline,50.55,-1.262,15.538,-0.127,27.324,-0.082,665.961,964.224,-255.255,7,7,purged_chronological,True
+"Plates, Bowls, Trays & Serveware",Linear Regression,26.09,0.425,79.327,-20.699,100.991,-6.494,2461.458,2537.668,2361.02,7,7,purged_chronological,False
+"Plates, Bowls, Trays & Serveware",Random Forest,4.343,0.977,86.598,-23.928,95.47,-5.766,2326.891,2411.356,2174.379,7,7,purged_chronological,False
+"Plates, Bowls, Trays & Serveware",XGBoost,0.153,1.0,107.727,-37.732,98.917,-6.565,2410.908,2549.699,2322.888,7,7,purged_chronological,False
+Sewing & Craft Kits,7-Day Rolling Sum Baseline,38.983,-1.004,50.434,-1.906,57.566,-6.308,684.745,964.17,265.216,7,7,purged_chronological,False
+Sewing & Craft Kits,Linear Regression,19.199,0.456,38.468,-0.822,34.048,-1.123,404.997,519.646,-297.704,7,7,purged_chronological,False
+Sewing & Craft Kits,Random Forest,5.64,0.943,28.054,0.043,25.721,-0.457,305.952,430.556,-215.808,7,7,purged_chronological,True
+Sewing & Craft Kits,XGBoost,0.432,1.0,30.666,-0.232,29.778,-0.771,354.205,474.669,-235.592,7,7,purged_chronological,False
+"Stationery, Notebooks & Greeting Cards",7-Day Rolling Sum Baseline,41.246,-1.449,23.546,-0.492,24.076,-1.114,1132.941,1383.02,-221.882,7,7,purged_chronological,False
+"Stationery, Notebooks & Greeting Cards",Linear Regression,18.154,0.528,17.938,0.099,26.755,-1.664,1258.965,1552.552,-1187.745,7,7,purged_chronological,True
+"Stationery, Notebooks & Greeting Cards",Random Forest,4.007,0.975,19.037,-0.025,53.466,-7.03,2515.91,2695.567,-2515.91,7,7,purged_chronological,False
+"Stationery, Notebooks & Greeting Cards",XGBoost,0.169,1.0,19.128,-0.06,54.11,-7.19,2546.221,2722.154,-2546.221,7,7,purged_chronological,False
+"Stickers, Patches & Badges",7-Day Rolling Sum Baseline,85.183,-0.932,76.594,-1.613,46.302,-1.046,371.902,447.305,-37.0,7,7,purged_chronological,False
+"Stickers, Patches & Badges",Linear Regression,59.573,0.2,63.058,-0.81,83.249,-4.466,668.672,731.112,668.672,7,7,purged_chronological,True
+"Stickers, Patches & Badges",Random Forest,14.766,0.932,94.123,-1.936,102.467,-9.063,823.028,992.011,789.51,7,7,purged_chronological,False
+"Stickers, Patches & Badges",XGBoost,0.477,1.0,106.892,-3.751,119.873,-15.246,962.838,1260.434,800.252,7,7,purged_chronological,False
+Tea & Coffee Sets,7-Day Rolling Sum Baseline,81.582,-1.882,51.062,-0.893,34.561,-1.5,176.686,222.265,-43.51,7,7,purged_chronological,False
+Tea & Coffee Sets,Linear Regression,41.883,0.275,60.529,-1.529,28.509,-0.8,145.749,188.627,68.399,7,7,purged_chronological,False
+Tea & Coffee Sets,Random Forest,9.255,0.953,49.138,-0.979,27.316,-0.644,139.651,180.242,35.563,7,7,purged_chronological,True
+Tea & Coffee Sets,XGBoost,0.527,1.0,56.748,-2.22,27.951,-0.611,142.895,178.414,5.709,7,7,purged_chronological,False
+Tealight Holders & Sets,7-Day Rolling Sum Baseline,30.145,-0.992,19.223,-1.893,18.348,-0.904,1411.51,1723.839,-786.373,7,7,purged_chronological,False
+Tealight Holders & Sets,Linear Regression,15.802,0.535,14.381,-0.71,34.666,-4.494,2666.891,2928.437,-2666.891,7,7,purged_chronological,True
+Tealight Holders & Sets,Random Forest,3.411,0.975,21.117,-2.177,31.586,-3.495,2429.987,2648.67,-2429.987,7,7,purged_chronological,False
+Tealight Holders & Sets,XGBoost,0.19,1.0,20.447,-2.133,43.511,-6.969,3347.359,3526.872,-3347.359,7,7,purged_chronological,False
+Travel & Office Accessories,7-Day Rolling Sum Baseline,62.81,-0.629,28.288,-0.62,46.943,-0.071,627.392,943.084,-505.353,7,7,purged_chronological,False
+Travel & Office Accessories,Linear Regression,42.013,0.346,47.673,-3.21,50.488,-0.301,674.765,1039.571,-569.103,7,7,purged_chronological,False
+Travel & Office Accessories,Random Forest,7.279,0.978,24.782,-0.419,78.539,-1.339,1049.672,1393.951,-1049.672,7,7,purged_chronological,True
+Travel & Office Accessories,XGBoost,0.589,1.0,31.55,-1.036,80.266,-1.38,1072.748,1406.126,-1072.748,7,7,purged_chronological,False
+Trinket Boxes & Keepsakes,7-Day Rolling Sum Baseline,37.008,-1.134,53.559,-1.815,53.373,-1.581,956.98,1206.043,0.706,7,7,purged_chronological,False
+Trinket Boxes & Keepsakes,Linear Regression,22.117,0.311,53.607,-1.81,60.402,-2.322,1083.012,1368.104,-1059.258,7,7,purged_chronological,False
+Trinket Boxes & Keepsakes,Random Forest,5.203,0.953,35.99,-0.611,53.22,-1.655,954.241,1223.21,-954.241,7,7,purged_chronological,False
+Trinket Boxes & Keepsakes,XGBoost,0.357,1.0,31.826,-0.327,46.706,-1.201,837.439,1113.753,-823.015,7,7,purged_chronological,True
+Unclassified,7-Day Rolling Sum Baseline,70.38,-0.337,52.366,-4.261,50.59,-0.61,25.235,33.739,-7.392,7,7,purged_chronological,False
+Unclassified,Linear Regression,43.356,0.533,27.495,-0.407,53.77,-1.127,26.822,38.773,-18.855,7,7,purged_chronological,True
+Unclassified,Random Forest,7.521,0.982,30.063,-0.775,64.764,-1.348,32.306,40.74,-32.232,7,7,purged_chronological,False
+Unclassified,XGBoost,0.965,1.0,37.696,-2.268,70.445,-1.752,35.139,44.103,-35.105,7,7,purged_chronological,False
+Wall Art & Prints,7-Day Rolling Sum Baseline,78.067,-0.134,96.687,-0.128,82.16,-9.642,765.412,1461.818,405.647,7,7,purged_chronological,True
+Wall Art & Prints,Linear Regression,52.302,0.593,98.64,-0.105,86.25,-2.893,803.508,884.109,-634.25,7,7,purged_chronological,False
+Wall Art & Prints,Random Forest,13.304,0.961,97.788,-0.118,91.014,-3.582,847.89,959.238,-847.89,7,7,purged_chronological,False
+Wall Art & Prints,XGBoost,0.727,1.0,98.316,-0.109,91.071,-3.592,848.422,960.24,-848.422,7,7,purged_chronological,False
+Wooden Letters & Number Tiles,7-Day Rolling Sum Baseline,50.544,-1.364,26.118,-2.397,38.334,-0.502,65.588,95.369,-31.078,7,7,purged_chronological,False
+Wooden Letters & Number Tiles,Linear Regression,28.534,0.54,12.029,0.167,31.898,0.172,54.578,70.796,-15.872,7,7,purged_chronological,True
+Wooden Letters & Number Tiles,Random Forest,4.976,0.984,14.08,-0.194,33.89,-0.243,57.985,86.755,-37.688,7,7,purged_chronological,False
+Wooden Letters & Number Tiles,XGBoost,0.528,1.0,17.368,-0.825,34.253,-0.284,58.607,88.173,-39.085,7,7,purged_chronological,False
