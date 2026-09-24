@@ -178,8 +178,7 @@ res = pipe.run_pipeline(
     Y=7,
     split_strategy="purged_chronological",
 )
-
-print(res["results"])
+res["results"]
 print(res["split_overlap_report"])
 ```
 
