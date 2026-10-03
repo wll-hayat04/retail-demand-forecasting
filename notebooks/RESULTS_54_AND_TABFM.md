@@ -221,10 +221,9 @@ predictions — the same denominator effect documented in `RESULTS_REVISED.md`.
 | Random Forest, one fit+predict, CPU | 1.26 s |
 | Linear Regression, one fit+predict, CPU | 0.21 s |
 
-TabFM is **426× slower than Random Forest on CPU**. The GPU is 51× faster
-than the CPU, but even there, extrapolating to 54 categories with 30 seeds
-gives roughly 15 GPU-hours — against 139 seconds for all four classical
-models across all 54 categories on a laptop.
+In one local CPU benchmark on an Intel i5-1135G7, TabFM required **536.7 s** for one fit-and-predict call, compared with **1.26 s** for Random Forest (about **426× slower**).
+On a Tesla T4, a TabFM fit-and-predict call took approximately **10.5 s**, about **51× faster than the local CPU benchmark**.
+These timings are hardware- and configuration-specific and are reported as empirical measurements rather than as a general speed ratio for TabFM.
 
 Two further constraints. The model ships 6.6 GB of weights for the regression
 head alone (13 GB for the full repository), and loading it in float32

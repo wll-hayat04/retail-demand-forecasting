@@ -111,22 +111,35 @@ def _add_holiday_features(df, X, Y, holiday_dates):
 
 
 def _check_contiguous(df: pd.DataFrame, category: str) -> None:
-    """Warn if dates are not consecutive days.
+    """Require a complete, unique daily date index for one category.
 
-    Both the target and the lag features assume row i+1 is the day after
-    row i. If a date is missing, lag_7 silently stops meaning "one week ago"
-    and every downstream number is quietly wrong.
+    Lag and target calculations use row offsets as calendar-day offsets.
+    Missing or duplicated dates would therefore change their meaning.
     """
-    if len(df) < 2:
+    if df.empty:
         return
-    gaps = df["Date"].diff().dropna()
-    if not (gaps == pd.Timedelta(days=1)).all():
-        n_gaps = int((gaps != pd.Timedelta(days=1)).sum())
-        print(
-            f"WARNING [{category}]: {n_gaps} gap(s) in the daily date index. "
-            "Lag and target semantics assume consecutive days."
+
+    dates = pd.to_datetime(df["Date"])
+
+    if dates.isna().any():
+        raise ValueError(
+            f"[{category}] The Date column contains missing values."
         )
 
+    if dates.duplicated().any():
+        raise ValueError(
+            f"[{category}] The daily series contains duplicated dates."
+        )
+
+    gaps = dates.diff().dropna()
+
+    if not (gaps == pd.Timedelta(days=1)).all():
+        n_gaps = int((gaps != pd.Timedelta(days=1)).sum())
+        raise ValueError(
+            f"[{category}] Found {n_gaps} non-consecutive date "
+            "interval(s). Lag and target calculations require "
+            "a complete daily series."
+        )
 
 def available_features(data: pd.DataFrame) -> list[str]:
     """The configured feature list, restricted to columns actually present."""

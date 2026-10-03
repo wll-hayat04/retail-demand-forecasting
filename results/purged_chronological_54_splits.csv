@@ -1,0 +1,55 @@
+Category,X,Y,split_strategy,best_model_on_validation,maximum_target_overlap_pct,train_rows,train_first_reference_date,train_last_reference_date,train_last_target_date,validation_rows,validation_first_reference_date,validation_last_reference_date,validation_last_target_date,test_rows,test_first_reference_date,test_last_reference_date,test_last_target_date
+"Bag Charms, Key Rings & Phone Charms",7,7,purged_chronological,XGBoost,0.0,220,2010-12-29,2011-08-05,2011-08-18,36,2011-08-19,2011-09-23,2011-10-06,51,2011-10-07,2011-11-26,2011-12-09
+"Bags, Purses & Backpacks",7,7,purged_chronological,Linear Regression,0.0,220,2010-12-29,2011-08-05,2011-08-18,36,2011-08-19,2011-09-23,2011-10-06,51,2011-10-07,2011-11-26,2011-12-09
+"Baskets, Hampers & Wicker",7,7,purged_chronological,7-Day Rolling Sum Baseline,0.0,220,2010-12-29,2011-08-05,2011-08-18,36,2011-08-19,2011-09-23,2011-10-06,51,2011-10-07,2011-11-26,2011-12-09
+Cake Cases & Baking Accessories,7,7,purged_chronological,Random Forest,0.0,220,2010-12-29,2011-08-05,2011-08-18,36,2011-08-19,2011-09-23,2011-10-06,51,2011-10-07,2011-11-26,2011-12-09
+Cake Stands,7,7,purged_chronological,Linear Regression,0.0,220,2010-12-29,2011-08-05,2011-08-18,36,2011-08-19,2011-09-23,2011-10-06,51,2011-10-07,2011-11-26,2011-12-09
+"Candles, Incense & Matches",7,7,purged_chronological,7-Day Rolling Sum Baseline,0.0,220,2010-12-29,2011-08-05,2011-08-18,36,2011-08-19,2011-09-23,2011-10-06,51,2011-10-07,2011-11-26,2011-12-09
+Children's Toys & Playsets,7,7,purged_chronological,Linear Regression,0.0,220,2010-12-29,2011-08-05,2011-08-18,36,2011-08-19,2011-09-23,2011-10-06,51,2011-10-07,2011-11-26,2011-12-09
+Christmas Decorations,7,7,purged_chronological,7-Day Rolling Sum Baseline,0.0,220,2010-12-29,2011-08-05,2011-08-18,36,2011-08-19,2011-09-23,2011-10-06,51,2011-10-07,2011-11-26,2011-12-09
+Clocks & Timepieces,7,7,purged_chronological,XGBoost,0.0,220,2010-12-29,2011-08-05,2011-08-18,36,2011-08-19,2011-09-23,2011-10-06,51,2011-10-07,2011-11-26,2011-12-09
+"Clothing, Accessories & Beauty",7,7,purged_chronological,7-Day Rolling Sum Baseline,0.0,220,2010-12-29,2011-08-05,2011-08-18,36,2011-08-19,2011-09-23,2011-10-06,51,2011-10-07,2011-11-26,2011-12-09
+"Coat Racks, Hooks & Hangers",7,7,purged_chronological,7-Day Rolling Sum Baseline,0.0,220,2010-12-29,2011-08-05,2011-08-18,36,2011-08-19,2011-09-23,2011-10-06,51,2011-10-07,2011-11-26,2011-12-09
+Colouring & Art Supplies,7,7,purged_chronological,Linear Regression,0.0,220,2010-12-29,2011-08-05,2011-08-18,36,2011-08-19,2011-09-23,2011-10-06,51,2011-10-07,2011-11-26,2011-12-09
+"Cushions, Quilts & Home Textiles",7,7,purged_chronological,7-Day Rolling Sum Baseline,0.0,220,2010-12-29,2011-08-05,2011-08-18,36,2011-08-19,2011-09-23,2011-10-06,51,2011-10-07,2011-11-26,2011-12-09
+Cutlery & Chopping Boards,7,7,purged_chronological,Random Forest,0.0,220,2010-12-29,2011-08-05,2011-08-18,36,2011-08-19,2011-09-23,2011-10-06,51,2011-10-07,2011-11-26,2011-12-09
+Decorative Hanging Ornaments & Figurines,7,7,purged_chronological,Random Forest,0.0,220,2010-12-29,2011-08-05,2011-08-18,36,2011-08-19,2011-09-23,2011-10-06,51,2011-10-07,2011-11-26,2011-12-09
+Doormats & Doorstops,7,7,purged_chronological,XGBoost,0.0,220,2010-12-29,2011-08-05,2011-08-18,36,2011-08-19,2011-09-23,2011-10-06,51,2011-10-07,2011-11-26,2011-12-09
+Easter Decorations,7,7,purged_chronological,7-Day Rolling Sum Baseline,0.0,220,2010-12-29,2011-08-05,2011-08-18,36,2011-08-19,2011-09-23,2011-10-06,51,2011-10-07,2011-11-26,2011-12-09
+Egg Cups & Holders,7,7,purged_chronological,Linear Regression,0.0,220,2010-12-29,2011-08-05,2011-08-18,36,2011-08-19,2011-09-23,2011-10-06,51,2011-10-07,2011-11-26,2011-12-09
+Fairy Lights & Decorative Garlands,7,7,purged_chronological,Linear Regression,0.0,220,2010-12-29,2011-08-05,2011-08-18,36,2011-08-19,2011-09-23,2011-10-06,51,2011-10-07,2011-11-26,2011-12-09
+"Furniture, Cabinets & Storage Furniture",7,7,purged_chronological,Linear Regression,0.0,220,2010-12-29,2011-08-05,2011-08-18,36,2011-08-19,2011-09-23,2011-10-06,51,2011-10-07,2011-11-26,2011-12-09
+"Garden, Bird Feeding & Outdoor Décor",7,7,purged_chronological,7-Day Rolling Sum Baseline,0.0,220,2010-12-29,2011-08-05,2011-08-18,36,2011-08-19,2011-09-23,2011-10-06,51,2011-10-07,2011-11-26,2011-12-09
+"Gift Wrap, Tape & Ribbons",7,7,purged_chronological,XGBoost,0.0,220,2010-12-29,2011-08-05,2011-08-18,36,2011-08-19,2011-09-23,2011-10-06,51,2011-10-07,2011-11-26,2011-12-09
+"Glass Jars, Bottles & Vases",7,7,purged_chronological,Linear Regression,0.0,220,2010-12-29,2011-08-05,2011-08-18,36,2011-08-19,2011-09-23,2011-10-06,51,2011-10-07,2011-11-26,2011-12-09
+Hair Accessories,7,7,purged_chronological,Random Forest,0.0,220,2010-12-29,2011-08-05,2011-08-18,36,2011-08-19,2011-09-23,2011-10-06,51,2011-10-07,2011-11-26,2011-12-09
+Hand Warmers & Umbrellas,7,7,purged_chronological,7-Day Rolling Sum Baseline,0.0,220,2010-12-29,2011-08-05,2011-08-18,36,2011-08-19,2011-09-23,2011-10-06,51,2011-10-07,2011-11-26,2011-12-09
+Hot Water Bottles,7,7,purged_chronological,7-Day Rolling Sum Baseline,0.0,220,2010-12-29,2011-08-05,2011-08-18,36,2011-08-19,2011-09-23,2011-10-06,51,2011-10-07,2011-11-26,2011-12-09
+"Jewellery - Bracelets, Rings & Brooches",7,7,purged_chronological,Random Forest,0.0,220,2010-12-29,2011-08-05,2011-08-18,36,2011-08-19,2011-09-23,2011-10-06,51,2011-10-07,2011-11-26,2011-12-09
+Jewellery - Earrings,7,7,purged_chronological,Linear Regression,0.0,220,2010-12-29,2011-08-05,2011-08-18,36,2011-08-19,2011-09-23,2011-10-06,51,2011-10-07,2011-11-26,2011-12-09
+Jewellery - Necklaces,7,7,purged_chronological,Linear Regression,0.0,220,2010-12-29,2011-08-05,2011-08-18,36,2011-08-19,2011-09-23,2011-10-06,51,2011-10-07,2011-11-26,2011-12-09
+"Jigsaw Puzzles, Card Games & Board Games",7,7,purged_chronological,7-Day Rolling Sum Baseline,0.0,220,2010-12-29,2011-08-05,2011-08-18,36,2011-08-19,2011-09-23,2011-10-06,51,2011-10-07,2011-11-26,2011-12-09
+Jumbo Bags & Shoppers,7,7,purged_chronological,Linear Regression,0.0,220,2010-12-29,2011-08-05,2011-08-18,36,2011-08-19,2011-09-23,2011-10-06,51,2011-10-07,2011-11-26,2011-12-09
+Kitchen Storage & Containers,7,7,purged_chronological,Linear Regression,0.0,220,2010-12-29,2011-08-05,2011-08-18,36,2011-08-19,2011-09-23,2011-10-06,51,2011-10-07,2011-11-26,2011-12-09
+Kitchen Utensils & Tools,7,7,purged_chronological,Linear Regression,0.0,220,2010-12-29,2011-08-05,2011-08-18,36,2011-08-19,2011-09-23,2011-10-06,51,2011-10-07,2011-11-26,2011-12-09
+Lamps & Lampshades,7,7,purged_chronological,Random Forest,0.0,220,2010-12-29,2011-08-05,2011-08-18,36,2011-08-19,2011-09-23,2011-10-06,51,2011-10-07,2011-11-26,2011-12-09
+Lanterns,7,7,purged_chronological,Linear Regression,0.0,220,2010-12-29,2011-08-05,2011-08-18,36,2011-08-19,2011-09-23,2011-10-06,51,2011-10-07,2011-11-26,2011-12-09
+Lunch Boxes & Snack Bags,7,7,purged_chronological,7-Day Rolling Sum Baseline,0.0,220,2010-12-29,2011-08-05,2011-08-18,36,2011-08-19,2011-09-23,2011-10-06,51,2011-10-07,2011-11-26,2011-12-09
+Memo Boards & Blackboards,7,7,purged_chronological,XGBoost,0.0,220,2010-12-29,2011-08-05,2011-08-18,36,2011-08-19,2011-09-23,2011-10-06,51,2011-10-07,2011-11-26,2011-12-09
+Metal Signs & Plaques,7,7,purged_chronological,Random Forest,0.0,220,2010-12-29,2011-08-05,2011-08-18,36,2011-08-19,2011-09-23,2011-10-06,51,2011-10-07,2011-11-26,2011-12-09
+Mirrors,7,7,purged_chronological,XGBoost,0.0,220,2010-12-29,2011-08-05,2011-08-18,36,2011-08-19,2011-09-23,2011-10-06,51,2011-10-07,2011-11-26,2011-12-09
+"Mugs, Cups & Glasses",7,7,purged_chronological,Random Forest,0.0,220,2010-12-29,2011-08-05,2011-08-18,36,2011-08-19,2011-09-23,2011-10-06,51,2011-10-07,2011-11-26,2011-12-09
+"Paper Napkins, Doilies & Bunting",7,7,purged_chronological,Random Forest,0.0,220,2010-12-29,2011-08-05,2011-08-18,36,2011-08-19,2011-09-23,2011-10-06,51,2011-10-07,2011-11-26,2011-12-09
+Party & Event Accessories,7,7,purged_chronological,7-Day Rolling Sum Baseline,0.0,220,2010-12-29,2011-08-05,2011-08-18,36,2011-08-19,2011-09-23,2011-10-06,51,2011-10-07,2011-11-26,2011-12-09
+Picture Frames & Photo Accessories,7,7,purged_chronological,Linear Regression,0.0,220,2010-12-29,2011-08-05,2011-08-18,36,2011-08-19,2011-09-23,2011-10-06,51,2011-10-07,2011-11-26,2011-12-09
+"Plates, Bowls, Trays & Serveware",7,7,purged_chronological,7-Day Rolling Sum Baseline,0.0,220,2010-12-29,2011-08-05,2011-08-18,36,2011-08-19,2011-09-23,2011-10-06,51,2011-10-07,2011-11-26,2011-12-09
+Sewing & Craft Kits,7,7,purged_chronological,Random Forest,0.0,220,2010-12-29,2011-08-05,2011-08-18,36,2011-08-19,2011-09-23,2011-10-06,51,2011-10-07,2011-11-26,2011-12-09
+"Stationery, Notebooks & Greeting Cards",7,7,purged_chronological,Linear Regression,0.0,220,2010-12-29,2011-08-05,2011-08-18,36,2011-08-19,2011-09-23,2011-10-06,51,2011-10-07,2011-11-26,2011-12-09
+"Stickers, Patches & Badges",7,7,purged_chronological,Linear Regression,0.0,220,2010-12-29,2011-08-05,2011-08-18,36,2011-08-19,2011-09-23,2011-10-06,51,2011-10-07,2011-11-26,2011-12-09
+Tea & Coffee Sets,7,7,purged_chronological,Random Forest,0.0,220,2010-12-29,2011-08-05,2011-08-18,36,2011-08-19,2011-09-23,2011-10-06,51,2011-10-07,2011-11-26,2011-12-09
+Tealight Holders & Sets,7,7,purged_chronological,Linear Regression,0.0,220,2010-12-29,2011-08-05,2011-08-18,36,2011-08-19,2011-09-23,2011-10-06,51,2011-10-07,2011-11-26,2011-12-09
+Travel & Office Accessories,7,7,purged_chronological,Random Forest,0.0,220,2010-12-29,2011-08-05,2011-08-18,36,2011-08-19,2011-09-23,2011-10-06,51,2011-10-07,2011-11-26,2011-12-09
+Trinket Boxes & Keepsakes,7,7,purged_chronological,XGBoost,0.0,220,2010-12-29,2011-08-05,2011-08-18,36,2011-08-19,2011-09-23,2011-10-06,51,2011-10-07,2011-11-26,2011-12-09
+Unclassified,7,7,purged_chronological,Linear Regression,0.0,220,2010-12-29,2011-08-05,2011-08-18,36,2011-08-19,2011-09-23,2011-10-06,51,2011-10-07,2011-11-26,2011-12-09
+Wall Art & Prints,7,7,purged_chronological,7-Day Rolling Sum Baseline,0.0,220,2010-12-29,2011-08-05,2011-08-18,36,2011-08-19,2011-09-23,2011-10-06,51,2011-10-07,2011-11-26,2011-12-09
+Wooden Letters & Number Tiles,7,7,purged_chronological,Linear Regression,0.0,220,2010-12-29,2011-08-05,2011-08-18,36,2011-08-19,2011-09-23,2011-10-06,51,2011-10-07,2011-11-26,2011-12-09
